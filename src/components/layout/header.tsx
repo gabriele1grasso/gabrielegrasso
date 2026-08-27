@@ -23,7 +23,7 @@ export function Header() {
           <span className="bg-accent text-accent-foreground flex size-8 items-center justify-center rounded-md text-sm font-bold">
             GG
           </span>
-          <span className="hidden sm:inline">Gabriele Grasso</span>
+          <span className="hidden sm:inline">Direzione Digitale</span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

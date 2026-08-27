@@ -1,23 +1,15 @@
-import { CheckIcon } from 'lucide-react'
-
+import { SectionHeading } from '@/components/sections/section-heading'
 import { phases } from '@/data/content'
 
 export function Protocol() {
   return (
     <section id="come-funziona" className="border-b scroll-mt-16">
       <div className="container-page py-20">
-        <div className="mx-auto max-w-2xl text-center">
-          <span className="text-accent text-sm font-semibold uppercase tracking-wide">
-            Come funziona
-          </span>
-          <h2 className="mt-2 text-[26px] sm:text-[34px]">
-            Il Protocollo 3P, in quattro fasi
-          </h2>
-          <p className="text-muted-foreground mt-4 text-lg">
-            Un percorso in ordine logico: prima le fondamenta, poi la strategia, poi il
-            budget, infine la campagna.
-          </p>
-        </div>
+        <SectionHeading
+          eyebrow="Cosa c’è dentro il Protocollo 3P"
+          title="Una sequenza chiara, dalla A alla Z"
+          description={'Ogni passaggio scritto nero su bianco, dal primo accesso al pulsante “pubblica”.'}
+        />
 
         <div className="mt-16 grid gap-8 lg:grid-cols-2">
           {phases.map((phase) => (
@@ -25,18 +17,14 @@ export function Protocol() {
               <span className="text-accent/30 absolute right-6 top-4 text-6xl font-bold select-none">
                 {phase.number}
               </span>
-              <h3 className="text-xl font-semibold">
+              <h3 className="max-w-[85%] text-xl font-semibold">
                 Fase {phase.number.replace(/^0/, '')} — {phase.title}
               </h3>
-              <p className="text-muted-foreground mt-2">{phase.description}</p>
-              <ul className="mt-4 space-y-2">
-                {phase.points.map((point) => (
-                  <li key={point} className="flex items-start gap-2 text-sm">
-                    <CheckIcon className="text-accent mt-0.5 size-4 shrink-0" />
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
+              <p className="text-muted-foreground mt-3">{phase.description}</p>
+              <p className="border-accent/30 mt-4 border-t pt-4 text-sm font-medium">
+                <span className="text-accent">Risultato: </span>
+                {phase.result}
+              </p>
             </div>
           ))}
         </div>

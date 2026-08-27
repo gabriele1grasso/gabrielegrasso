@@ -1,11 +1,5 @@
 import { Badge } from '@/components/ui/badge'
-
-const credentials = [
-  '10 anni di esperienza in Paid Media',
-  'Master in Digital Communication — Università Cattolica',
-  'Ex trainer in WPP Media',
-  'Oggi consulente e marketer per l’azienda di famiglia',
-]
+import { credentials } from '@/data/content'
 
 export function About() {
   return (
@@ -13,20 +7,26 @@ export function About() {
       <div className="container-page grid items-center gap-12 py-20 lg:grid-cols-2">
         <div className="order-2 lg:order-1">
           <span className="text-accent text-sm font-semibold uppercase tracking-wide">
-            Chi sono
+            Chi c’è dietro il Protocollo 3P
           </span>
-          <h2 className="mt-2 text-[26px] sm:text-[34px]">
-            Ciao, sono Gabriele Grasso
-          </h2>
+          <h2 className="mt-2 text-[26px] sm:text-[34px]">Gabriele Grasso</h2>
           <p className="text-muted-foreground mt-4 text-lg">
-            Ho passato gli ultimi 10 anni tra Paid Media e formazione, ma il Protocollo 3P
-            nasce da un problema molto concreto: dover gestire in prima persona la
-            pubblicità dell’azienda di famiglia, senza scorciatoie e senza un budget
-            infinito da bruciare in test.
+            Sono Gabriele Grasso. Ho lavorato con Meta Ads per dieci anni, l’ultimo
+            periodo in WPP Media, uno dei più grandi gruppi media al mondo. Oggi faccio
+            consulenza a imprenditori e professionisti e mi occupo del marketing
+            nell’azienda della mia famiglia: una doppia prospettiva che porto dentro il
+            Protocollo.
           </p>
-          <p className="text-muted-foreground mt-4 text-lg">
-            Per questo ho messo insieme in un unico percorso tutto quello che avrei voluto
-            avere io all’inizio: un metodo chiaro, replicabile e sempre aggiornato.
+
+          <h3 className="mt-8 text-lg font-semibold">Perché fidarti di me</h3>
+          <p className="text-accent mt-1 text-sm font-semibold">
+            Perché vivo le tue stesse sfide, ogni giorno in azienda.
+          </p>
+          <p className="text-muted-foreground mt-3">
+            Per anni ho gestito campagne per aziende grandi e piccole. Oggi mi occupo di
+            marketing nell’azienda di famiglia, e conosco da vicino le sfide quotidiane
+            di chi guida un’attività. Non ti parlo dall’alto: siamo dalla stessa parte
+            del tavolo.
           </p>
 
           <ul className="mt-6 flex flex-wrap gap-2">

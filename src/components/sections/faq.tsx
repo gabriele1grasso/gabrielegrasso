@@ -23,9 +23,11 @@ export function Faq() {
     <section id="faq" className="scroll-mt-16">
       <div className="container-page py-20">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-[26px] sm:text-[34px]">
-            Domande frequenti
-          </h2>
+          <span className="text-accent text-sm font-semibold uppercase tracking-wide">FAQ</span>
+          <h2 className="mt-2 text-[26px] sm:text-[34px]">Domande frequenti</h2>
+          <p className="text-muted-foreground mt-4 text-lg">
+            Quello che la gente mi chiede prima di acquistare.
+          </p>
         </div>
 
         <div className="mx-auto mt-12 max-w-3xl">
@@ -52,6 +54,19 @@ export function Faq() {
               ))}
             </Accordion>
           )}
+        </div>
+
+        <div className="mx-auto mt-12 flex max-w-2xl flex-col items-center gap-2 text-center">
+          <p className="font-medium">Hai ancora dubbi?</p>
+          <p className="text-muted-foreground text-sm">
+            Non esitare a contattarmi, sarò felice di risponderti.
+          </p>
+          <a
+            href="mailto:info@gabrielegrasso.com"
+            className="text-accent mt-1 text-sm font-semibold hover:underline"
+          >
+            Contattami
+          </a>
         </div>
       </div>
     </section>

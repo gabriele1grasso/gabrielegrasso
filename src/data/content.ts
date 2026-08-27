@@ -4,6 +4,7 @@ export interface Testimonial {
   name: string
   role: string
   initials: string
+  highlight?: string
 }
 
 export interface FaqItem {
@@ -17,82 +18,125 @@ export interface Phase {
   number: string
   title: string
   description: string
-  points: string[]
+  result: string
 }
 
-export const phases: Phase[] = [
+export interface Problem {
+  id: string
+  title: string
+  description: string
+}
+
+export interface SolutionTriad {
+  id: string
+  problem: string
+  solution: string
+  result: string
+}
+
+export const heroFeatures = [
+  'Spiegazioni e immagini ti accompagnano per tutto il percorso. Trovi anche delle video guide di approfondimento.',
+  'Un calcolatore per il budget: sai quanto spendere prima di partire, non improvvisi.',
+  'Aggiornamenti inclusi. Se Meta cambia le regole, la guida si adegua di conseguenza.',
+]
+
+export const problems: Problem[] = [
   {
-    id: 'pannello',
-    number: '01',
-    title: 'Pannello',
+    id: 'p1',
+    title: 'Tempo perso senza una direzione',
     description:
-      'Configurazione tecnica che ti dà pieno accesso e controllo della piattaforma, senza dipendere da nessuno.',
-    points: [
-      'Impostazione corretta di account, Pagina, Instagram e account pubblicitario a tuo nome',
-      'Creazione del Pixel e collegamento agli strumenti giusti',
-      'Gestione di accessi, ruoli e metodi di pagamento in sicurezza',
-    ],
+      'Apri Ads Manager, guardi le opzioni, chiudi tutto. Il giorno dopo ricominci da capo senza fare mai il primo passo.',
   },
   {
-    id: 'pubblico',
-    number: '02',
-    title: 'Pubblico',
+    id: 'p2',
+    title: 'Troppe informazioni, zero ordine',
     description:
-      'Il lavoro strategico da fare prima di accendere qualsiasi campagna, per non sprecare budget a caso.',
-    points: [
-      'Costruzione del funnel più adatto al tuo business',
-      'Profilazione del cliente: dolori, desideri e obiezioni reali',
-      'Preparazione degli angle e dei messaggi da testare',
-    ],
+      'Tutorial diversi, schermate che non corrispondono, consigli contrastanti. Più cerchi, meno è chiaro cosa fare.',
   },
   {
-    id: 'portafoglio',
-    number: '03',
-    title: 'Portafoglio',
+    id: 'p3',
+    title: 'Occasioni che vanno ai concorrenti',
     description:
-      'Numeri e budget spiegati in modo semplice, per sapere sempre quanto investire e cosa aspettarti.',
-    points: [
-      'Stima del budget iniziale in base al tuo margine',
-      'Calcolo del break-even e delle metriche chiave',
-      'Diagnosi delle campagne per capire cosa non funziona',
-    ],
+      'Chi sa muoversi su Meta intercetta clienti ogni giorno. Tu sei fermo ad aspettare di sentirti pronto.',
   },
   {
-    id: 'campagna',
-    number: '04',
-    title: 'La campagna',
+    id: 'p4',
+    title: 'Delega senza controllo',
     description:
-      'Il momento operativo: dalla struttura all’attivazione, con tutte le scelte spiegate passo passo.',
-    points: [
-      'Scelta dell’obiettivo di campagna corretto',
-      'Impostazione del pubblico e del budget',
-      'Caricamento delle creatività e pubblicazione',
-    ],
+      'Paghi un’agenzia o un freelance ma non hai gli strumenti per capire se il lavoro che ti fanno ha davvero senso.',
+  },
+  {
+    id: 'p5',
+    title: 'Budget bruciato senza criterio',
+    description:
+      'Campagne avviate sperando che funzionino, soldi che escono, e nessun modo di capire dove sia il problema.',
+  },
+]
+
+export const containsFeatures = [
+  'Checklist operativa: Pannello, Pubblico, Portafoglio',
+  'Accesso con aggiornamenti continui',
+  'Video guide e screenshot per i passaggi chiave',
+  'Garanzia soddisfatto o rimborsato entro 14 giorni',
+]
+
+export const tools = [
+  {
+    id: 't1',
+    title: 'Calcolatore di budget',
+    description: 'Sai quanto investire prima di pubblicare.',
+  },
+  {
+    id: 't2',
+    title: '500+ creatività Canva',
+    description: 'Parti da un format pronto, non da zero.',
+  },
+]
+
+export const solutionTriads: SolutionTriad[] = [
+  {
+    id: 's1',
+    problem: 'Non sai da dove iniziare',
+    solution: 'Una sequenza ordinata: Pannello, Pubblico, Portafoglio',
+    result: 'Sai esattamente dove mettere le mani',
+  },
+  {
+    id: 's2',
+    problem: 'Non sai leggere i risultati',
+    solution: 'Le metriche che contano, spiegate in modo semplice',
+    result: 'Sai se sta funzionando o se serve correggere',
+  },
+  {
+    id: 's3',
+    problem: 'Non sai se gli asset sono davvero tuoi o dell’agenzia',
+    solution:
+      'Capisci come dovrebbero essere intestati Business Manager, Pixel e Account Pubblicitario',
+    result: 'Sai esattamente su cosa hai il controllo',
   },
 ]
 
 export const testimonials: Testimonial[] = [
   {
     id: 't1',
-    quote: 'Sono riuscita ad attivare una sponsorizzata da sola.',
+    quote: 'Sono riuscita ad attivare una sponsorizzata da sola',
     name: 'Emanuela P.',
     role: 'Social Media Manager',
     initials: 'EP',
   },
   {
     id: 't2',
-    quote: 'Permette anche a chi parte da zero di acquisire autonomia e sicurezza.',
+    quote: 'Permette anche a chi parte da zero di acquisire autonomia e sicurezza',
     name: 'Grazia L.',
     role: 'Commercialista',
     initials: 'GL',
   },
   {
     id: 't3',
-    quote:
-      'Più che semplici lezioni teoriche, è stato un vero e proprio training on the job.',
+    quote: 'Più che semplici lezioni teoriche, è stato un vero e proprio training on the job.',
     name: 'Ilaria M.',
     role: 'Digital Specialist',
     initials: 'IM',
+    highlight: 'Quello che sembrava complicato, adesso è chiaro.',
   },
   {
     id: 't4',
@@ -103,93 +147,130 @@ export const testimonials: Testimonial[] = [
   },
 ]
 
+export const credentials = [
+  'Master in Digital Communication, Università Cattolica',
+  'Ho formato i professionisti del social advertising in WPP Media',
+  '10 anni di Paid Media tra agenzia e formazione',
+  'Docente per enti di formazione e consulente per aziende',
+]
+
+export const methodologyPoints = [
+  {
+    id: 'm1',
+    title: 'Sai sempre qual è il prossimo passo',
+    description:
+      'Il Protocollo è una sequenza di task da spuntare uno a uno. Ogni fase prepara la successiva, così vai avanti senza mai restare bloccato a chiederti cosa fare.',
+  },
+  {
+    id: 'm2',
+    title: 'Ti mostro dove cliccare',
+    description:
+      'Nei passaggi tecnici non ti lascio a indovinare: screenshot con il punto esatto dove cliccare, e una video guida dove serve davvero vederlo fare.',
+  },
+  {
+    id: 'm3',
+    title: 'Capisci il perché di ogni passaggio',
+    description:
+      'Ogni task ti spiega il perché, non solo il cosa. Così capisci la logica e sai muoverti da solo, anche dove la checklist non arriva.',
+  },
+  {
+    id: 'm4',
+    title: 'Prima le basi, poi la campagna',
+    description:
+      'Quasi tutti partono creando l’annuncio. È lì che si bloccano. Nel Protocollo la campagna arriva alla fine, quando il resto è già pronto.',
+  },
+]
+
+export const foundationPoints = [
+  'Capisci le metriche e non le dimentichi più',
+  'Sai quanto investire e cosa aspettarti, prima di spendere',
+  'La logica che impari vale per ogni campagna futura',
+  'Sai sempre a chi parlare e cosa dirgli, non spari nel mucchio',
+]
+
+export const phases: Phase[] = [
+  {
+    id: 'pannello',
+    number: '01',
+    title: 'Pannello',
+    description:
+      'La configurazione che rende tutto possibile. Differenza tra ambiente semplificato e Business Manager professionale. Configuri account, Pagina, Instagram e account pubblicitario intestati a te. Crei il Pixel, gestisci accessi e collaboratori, imposti pagamento e fatturazione.',
+    result: 'Hai accesso a tutte le opzioni, non alla versione ridotta.',
+  },
+  {
+    id: 'pubblico',
+    number: '02',
+    title: 'Pubblico',
+    description:
+      'La strategia prima della campagna. Le tre fasi del funnel e l’obiettivo giusto per la tua. Costruisci il profilo del cliente ideale con problemi, desideri e obiezioni reali. Definisci cosa ti rende diverso e scegli gli angoli da testare.',
+    result: 'Non scrivi più annunci a caso: parli a una persona precisa.',
+  },
+  {
+    id: 'portafoglio',
+    number: '03',
+    title: 'Portafoglio',
+    description:
+      'Budget, metriche e decisioni. Come Meta vende lo spazio e perché i costi variano. Stimi il budget, calcoli il punto di pareggio, leggi le metriche che contano e sai diagnosticare una campagna quando i risultati non arrivano.',
+    result: 'Sai quanto spendere e come leggere quello che succede.',
+  },
+  {
+    id: 'campagna',
+    number: '04',
+    title: 'La campagna',
+    description:
+      'Ci arrivi già preparato. Crei la campagna con l’obiettivo giusto, imposti pubblico, posizionamenti, budget e schedulazione. Carichi le creatività sull’angolo scelto e dai un nome riconoscibile a ogni campagna.',
+    result: 'Non speri più che funzioni. Lavori con un metodo.',
+  },
+]
+
+export const checklistFeatures = [
+  'Screenshot e video guide sui passaggi tecnici, clic per clic',
+  'Accesso con aggiornamenti continui',
+  'Calcolatore di budget e oltre 500 creatività da modificare su Canva',
+  '14 giorni per il rimborso, se cambi idea',
+]
+
+export const finalCtaFeatures = [
+  'Guida operativa Pannello, Pubblico, Portafoglio',
+  'Aggiornamenti della guida inclusi',
+  'Video guide e screenshot sui passaggi tecnici',
+  '14 giorni per il rimborso',
+]
+
 export const faqs: FaqItem[] = [
   {
     id: 'faq-1',
     question: 'Dopo la prima campagna il Protocollo 3P non mi serve più?',
     answer:
-      'Al contrario. Resta il tuo punto di riferimento anche per le campagne successive e viene aggiornato ogni volta che Meta cambia qualcosa nella piattaforma.',
+      'No anzi. Continua a essere il tuo riferimento ogni volta che imposti una nuova campagna, e con gli aggiornamenti non diventa mai obsoleta quando Meta cambia.',
   },
   {
     id: 'faq-2',
     question: 'Funziona anche se ho già un’agenzia che gestisce le mie campagne?',
     answer:
-      'Sì. Capire le basi ti permette di parlare la stessa lingua della tua agenzia e valutare con criterio le proposte e i risultati che ti portano.',
+      'Sì, e probabilmente è anche il momento giusto per leggerla. Avere le basi non significa fare a meno dell’agenzia: significa parlare la loro stessa lingua, capire i report che ricevi e sapere quando una scelta ha senso. Il rapporto con l’agenzia migliora quando il cliente sa di cosa stanno parlando.',
   },
   {
     id: 'faq-3',
     question: 'Posso chiedere il rimborso?',
-    answer:
-      'Sì, hai 14 giorni di tempo dall’acquisto per chiedere il rimborso completo se non sei soddisfatto.',
+    answer: 'Sì. Hai 14 giorni per provarla. Se non fa per te scrivimi e ti restituisco i soldi.',
   },
   {
     id: 'faq-4',
     question: 'Come funziona il pagamento?',
     answer:
-      'Il pagamento è gestito da Stripe e accetta le principali carte di credito e debito, in un’unica soluzione.',
+      'Il pagamento è gestito tramite Stripe, una delle piattaforme più sicure al mondo. Puoi pagare con tutte le principali carte di credito e debito.',
   },
   {
     id: 'faq-5',
     question: 'I miei dati di pagamento sono al sicuro?',
     answer:
-      'Sì. Stripe adotta standard di sicurezza tra i più elevati al mondo per l’elaborazione dei pagamenti online.',
+      'Sì. Stripe è una piattaforma con standard di sicurezza più alto del settore. I tuoi dati non passano mai dai miei sistemi.',
   },
   {
     id: 'faq-6',
     question: 'Funziona anche per il mio business?',
     answer:
-      'Sì, se vendi prodotti o servizi e vuoi promuoverli sulle piattaforme Meta (Facebook e Instagram), il Protocollo 3P è pensato per te.',
-  },
-]
-
-export const problems = [
-  {
-    id: 'p1',
-    title: 'Mancanza di direzione',
-    description: 'Apri Ads Manager, provi qualcosa, chiudi. E il giorno dopo daccapo.',
-  },
-  {
-    id: 'p2',
-    title: 'Troppe informazioni',
-    description:
-      'Tutorial contrastanti, guru diversi, consigli che si contraddicono l’uno con l’altro.',
-  },
-  {
-    id: 'p3',
-    title: 'Occasioni perse',
-    description: 'Mentre rimandi, i tuoi concorrenti intercettano clienti ogni giorno.',
-  },
-  {
-    id: 'p4',
-    title: 'Delega senza controllo',
-    description: 'Paghi un’agenzia ma non hai gli strumenti per valutare se lavora bene.',
-  },
-  {
-    id: 'p5',
-    title: 'Budget bruciato',
-    description: 'Campagne lanciate senza criteri misurabili, con soldi spesi alla cieca.',
-  },
-]
-
-export const included = [
-  {
-    id: 'i1',
-    title: 'Checklist operativa',
-    description: 'Con screenshot e video guida per ogni singolo passaggio, senza saltare nulla.',
-  },
-  {
-    id: 'i2',
-    title: 'Calcolatore di budget',
-    description: 'Per stimare in pochi minuti quanto investire in base al tuo margine.',
-  },
-  {
-    id: 'i3',
-    title: '500+ template Canva',
-    description: 'Pronti da personalizzare per creare le tue creatività in poco tempo.',
-  },
-  {
-    id: 'i4',
-    title: 'Aggiornamenti continui',
-    description: 'Il protocollo si aggiorna ogni volta che Meta cambia la piattaforma.',
+      'Sì, se vendi prodotti o servizi e vuoi farti conoscere su Meta. Le logiche delle ads sono le stesse a prescindere dal settore: cambia il messaggio, non il metodo.',
   },
 ]
