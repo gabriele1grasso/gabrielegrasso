@@ -10,7 +10,7 @@ export function Protocol() {
           <span className="text-accent text-sm font-semibold uppercase tracking-wide">
             Come funziona
           </span>
-          <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="mt-2 text-[26px] sm:text-[34px]">
             Il Protocollo 3P, in quattro fasi
           </h2>
           <p className="text-muted-foreground mt-4 text-lg">

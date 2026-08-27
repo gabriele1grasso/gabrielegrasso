@@ -9,7 +9,7 @@ export function GraziePage() {
       <span className="bg-accent/10 text-accent flex size-16 items-center justify-center rounded-full">
         <PartyPopperIcon className="size-8" />
       </span>
-      <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
+      <h1 className="text-[26px] sm:text-[34px]">
         Grazie, sei dentro il Protocollo 3P!
       </h1>
       <p className="text-muted-foreground max-w-xl text-lg">

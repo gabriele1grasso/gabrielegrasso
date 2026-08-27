@@ -24,7 +24,7 @@ export function Pricing() {
               +250 imprenditori e professionisti soddisfatti
             </span>
 
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            <h2 className="text-[26px] sm:text-[34px]">
               Inizia oggi il Protocollo 3P
             </h2>
 

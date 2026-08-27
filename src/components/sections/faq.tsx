@@ -23,7 +23,7 @@ export function Faq() {
     <section id="faq" className="scroll-mt-16">
       <div className="container-page py-20">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="text-[26px] sm:text-[34px]">
             Domande frequenti
           </h2>
         </div>

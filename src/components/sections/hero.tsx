@@ -14,7 +14,7 @@ export function Hero() {
           Il metodo per chi inizia con la pubblicità online
         </span>
 
-        <h1 className="text-balance max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+        <h1 className="text-balance max-w-2xl text-[32px] sm:text-[40px]">
           Smetti di fare Meta Ads <span className="text-accent">alla cieca.</span>
         </h1>
 
