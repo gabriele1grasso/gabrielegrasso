@@ -8,6 +8,9 @@
      esattamente di questa misura per far partire lo sfondo viola dal bordo superiore. */
   --navbar-h: 76px;
   --header-h: calc(var(--navbar-h) + 16px);
+  /* Spazio lasciato sopra una sezione raggiunta da un link della navbar: lo imposta
+     SectionLink in base alla direzione dello scroll (vedi section-link.tsx). */
+  --section-offset: var(--header-h);
 
   /* Brand tokens read from the live site's own CSS custom properties
      (--color-kit-key1/key2/light/white) and button/heading styles. */
@@ -87,6 +90,21 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+  }
+  /* Tailwind 4 lascia il cursore di default sui bottoni: mano su tutto ciò che è cliccabile */
+  a[href],
+  button,
+  [role='button'],
+  summary,
+  label[for],
+  select,
+  input[type='checkbox'],
+  input[type='radio'] {
+    cursor: pointer;
+  }
+  :disabled,
+  [aria-disabled='true'] {
+    cursor: not-allowed;
   }
   body {
     @apply bg-background text-foreground;

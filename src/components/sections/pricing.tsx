@@ -19,10 +19,7 @@ const featureIcons = [
 
 export function PricingCard() {
   return (
-    <div
-      id="pricing"
-      className="flex scroll-mt-28 flex-col rounded-2xl bg-white p-6 pb-12 text-[#010101] sm:p-10 sm:pb-12"
-    >
+    <div className="flex flex-col rounded-2xl bg-white p-6 pb-12 text-[#010101] sm:p-10 sm:pb-12">
       <p className="text-[#010101]/70">La Checklist Protocollo 3P</p>
       <h2 className="text-display mt-7.5 leading-[1.4]">Tutto il metodo, in un'unica guida</h2>
       <p className="mt-7.5">

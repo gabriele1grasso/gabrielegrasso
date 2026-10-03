@@ -46,7 +46,7 @@ function ContainsCard() {
 
 export function Contains() {
   return (
-    <section id="cosa-include" className="scroll-mt-28">
+    <section id="cosa-include" className="scroll-mt-(--section-offset)">
       <div className="container-page grid gap-6 py-7.5 lg:grid-cols-2 lg:py-15 lg:gap-8">
         <ContainsCard />
         <ToolsCard />
