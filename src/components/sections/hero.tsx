@@ -11,7 +11,7 @@ export function Hero() {
   return (
     <section
       // Sale sotto la navbar flottante così lo sfondo viola parte dal bordo superiore.
-      className="bg-brand-gradient -mt-[88px] pt-[88px] text-white sm:-mt-[104px] sm:pt-[104px]"
+      className="bg-brand-gradient -mt-(--header-h) pt-(--header-h) text-white"
     >
       <div className="container-page grid items-center gap-12 py-12 sm:py-16 lg:grid-cols-[1fr_minmax(0,0.95fr)] lg:gap-10 lg:pb-24">
         <div className="flex flex-col items-start">

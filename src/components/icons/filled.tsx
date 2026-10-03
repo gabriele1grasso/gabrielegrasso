@@ -95,3 +95,44 @@ export function ShieldCheckFilledIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   )
 }
+
+export function GraduationCapFilledIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden {...props}>
+      <rect x="22" y="11" width="2" height="6" />
+      <path d="M13.241 15.73A2.98 2.98 0 0 1 12 16c-.43 0-.847-.09-1.24-.269L4 12.658V18c0 2.626 4.024 4 8 4s8-1.374 8-4v-5.341l-6.759 3.071Z" />
+      <path d="m23.414 7.09-11-5a1 1 0 0 0-.827 0l-11 5a1 1 0 0 0 0 1.82l11 5a1 1 0 0 0 .827 0l11-5a1 1 0 0 0 0-1.82Z" />
+    </svg>
+  )
+}
+
+export function MegaphoneFilledIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden {...props}>
+      <path d="M20 9a2.99 2.99 0 0 0-2.658-2.966A12.6 12.6 0 0 0 17 9c0 1.05.12 2.05.342 2.966A2.99 2.99 0 0 0 20 9Z" />
+      <path d="m11.667 17.911-5.788-1.845 2.632 6.475a2.329 2.329 0 0 0 4.321-1.741Z" />
+      <path d="M19 0a3.13 3.13 0 0 0-1.054.185L2.73 5.037A3.818 3.818 0 0 0 0 9a3.809 3.809 0 0 0 2.7 3.953l15.25 4.862A3.13 3.13 0 0 0 19 18c2.851 0 5-3.869 5-9s-2.149-9-5-9Zm0 16c-1.416 0-3-2.994-3-7s1.584-7 3-7 3 2.994 3 7-1.584 7-3 7Z" />
+    </svg>
+  )
+}
+
+export function ChartGrowthFilledIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden {...props}>
+      <rect x="1" y="18" width="4" height="5" rx=".5" />
+      <rect x="7" y="11" width="4" height="12" rx=".5" />
+      <rect x="13" y="18" width="4" height="5" rx=".5" />
+      <rect x="19" y="11" width="4" height="12" rx=".5" />
+      <path d="M21.293 1.293 15 7.586 9.707 2.293a1 1 0 0 0-1.414 0l-7 7a1 1 0 1 0 1.414 1.414L9 4.414l5.293 5.293a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0-1.414-1.414Z" />
+    </svg>
+  )
+}
+
+export function BriefcaseFilledIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden {...props}>
+      <path d="M2 24h20a1 1 0 0 0 1-1v-3H1v3a1 1 0 0 0 1 1Z" />
+      <path d="M23 4h-6V1a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v3H1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h22a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1ZM9 2h6v2H9V2Zm7 11H8V9h8v4Z" />
+    </svg>
+  )
+}

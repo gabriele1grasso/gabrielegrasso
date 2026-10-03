@@ -4,6 +4,11 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  /* Altezza totale dell'header sticky (16px sopra + card della navbar): la hero risale
+     esattamente di questa misura per far partire lo sfondo viola dal bordo superiore. */
+  --navbar-h: 76px;
+  --header-h: calc(var(--navbar-h) + 16px);
+
   /* Brand tokens read from the live site's own CSS custom properties
      (--color-kit-key1/key2/light/white) and button/heading styles. */
   --radius: 0.5rem;
@@ -178,5 +183,11 @@
 
   @media (prefers-reduced-motion: reduce) {
     animation: none;
+  }
+}
+
+@media (min-width: 40rem) {
+  :root {
+    --navbar-h: 93px;
   }
 }

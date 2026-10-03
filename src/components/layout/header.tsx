@@ -14,7 +14,7 @@ const navLinks = [
 
 function Logo() {
   return (
-    <Link to="/" className="block shrink-0" aria-label="Gabriele Grasso — Home">
+    <Link to="/" className="ml-2 block shrink-0 sm:ml-[23px]" aria-label="Gabriele Grasso — Home">
       <img src="/logo.png" alt="gabrielegrasso." width={576} height={193} className="h-10 w-auto sm:h-[46px]" />
     </Link>
   )
@@ -27,7 +27,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 w-full pt-4">
       <div className="container-page">
-        <div className="flex items-center justify-between h-[76px] rounded-2xl bg-white px-4 shadow-[0_8px_30px_rgba(94,65,227,0.12)] sm:h-[93px]">
+        <div className="flex items-center justify-between h-(--navbar-h) rounded-2xl bg-white px-4 shadow-[0_8px_30px_rgba(94,65,227,0.12)]">
           <Logo />
 
           <nav className="hidden items-center gap-6 lg:flex">
