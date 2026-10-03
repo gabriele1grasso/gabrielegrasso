@@ -1,15 +1,16 @@
 import { Link } from '@tanstack/react-router'
 import { MenuIcon } from 'lucide-react'
 
+import { SectionLink } from '@/components/layout/section-link'
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 import { useUIStore } from '@/store/ui-store'
 
 const navLinks = [
-  { href: '/#come-funziona', label: 'Come funziona' },
-  { href: '/#cosa-include', label: 'Cosa include' },
-  { href: '/#chi-sono', label: 'Chi sono' },
-  { href: '/#faq', label: 'FAQ' },
+  { section: 'come-funziona', label: 'Come funziona' },
+  { section: 'cosa-include', label: 'Cosa include' },
+  { section: 'chi-sono', label: 'Chi sono' },
+  { section: 'faq', label: 'FAQ' },
 ]
 
 function Logo() {
@@ -32,19 +33,19 @@ export function Header() {
 
           <nav className="hidden items-center gap-6 lg:flex">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
+              <SectionLink
+                key={link.section}
+                section={link.section}
                 className="hover:text-accent text-[16.8px] text-[#1c1c1c] transition-colors"
               >
                 {link.label}
-              </a>
+              </SectionLink>
             ))}
           </nav>
 
           <div className="hidden lg:block">
             <Button asChild variant="accent" size="lg" className="font-extrabold tracking-[-0.5px]">
-              <a href="/#pricing">Inizia il Protocollo 3P</a>
+              <SectionLink section="pricing">Inizia il Protocollo 3P</SectionLink>
             </Button>
           </div>
 
@@ -60,19 +61,19 @@ export function Header() {
               </SheetHeader>
               <nav className="flex flex-col gap-1 px-4">
                 {navLinks.map((link) => (
-                  <a
-                    key={link.href}
-                    href={link.href}
+                  <SectionLink
+                    key={link.section}
+                    section={link.section}
                     onClick={() => setMobileNavOpen(false)}
                     className="hover:bg-secondary rounded-md px-3 py-3 text-base font-medium"
                   >
                     {link.label}
-                  </a>
+                  </SectionLink>
                 ))}
                 <Button asChild variant="accent" className="mt-4 font-bold">
-                  <a href="/#pricing" onClick={() => setMobileNavOpen(false)}>
+                  <SectionLink section="pricing" onClick={() => setMobileNavOpen(false)}>
                     Inizia il Protocollo 3P
-                  </a>
+                  </SectionLink>
                 </Button>
               </nav>
             </SheetContent>
