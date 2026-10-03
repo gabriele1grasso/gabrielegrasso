@@ -4,9 +4,10 @@ import type { ReactNode } from 'react'
 import { Button } from '@/components/ui/button'
 import { solutionTriads } from '@/data/content'
 
+// Etichetta grigia + contenuto, con la distanza dell'originale (10px) in un unico punto
 function Step({ label, children }: { label: string; children: ReactNode }) {
   return (
-    <div>
+    <div className="flex flex-col gap-2.5">
       <p className="text-muted-foreground">{label}</p>
       {children}
     </div>
@@ -18,42 +19,40 @@ export function Solutions() {
     <section>
       <div className="container-page pt-7.5 pb-15 lg:pt-15 lg:pb-30">
         <p className="text-muted-foreground">Cosa risolvi</p>
-        <h2 className="text-display mt-6 max-w-4xl">
+        <h2 className="text-display mt-5 max-w-4xl">
           Da "non so da dove iniziare" a una direzione chiara
         </h2>
-        <p className="mt-8 max-w-2xl">
+        <p className="mt-7.5 max-w-2xl">
           Ogni problema che ti blocca su Meta ha un punto preciso in cui si risolve.
           <br />
           Ecco dove interviene il Protocollo, passo per passo.
         </p>
 
-        <div className="mt-16 flex flex-col gap-14">
+        <div className="mt-12.5 flex flex-col gap-10">
           {solutionTriads.map((triad) => (
             <div
               key={triad.id}
-              className="grid gap-8 rounded-2xl bg-[#f2f2f2] p-8 sm:grid-cols-2 sm:p-10 lg:grid-cols-4 lg:gap-10"
+              className="grid gap-8 rounded-2xl bg-[#f2f2f2] p-6 sm:grid-cols-2 sm:p-10 lg:grid-cols-4 lg:gap-10"
             >
               <Step label="Problema:">
-                <h3 className="text-title mt-4">
-                  {triad.problem}
-                </h3>
+                <h3 className="text-title">{triad.problem}</h3>
               </Step>
+              {/* L'illustrazione resta intera e con le sue proporzioni (niente ritaglio), ed è
+                  centrata in verticale: se il testo accanto è più alto, lo spazio si divide
+                  sopra e sotto invece di accumularsi in fondo alla card. */}
               <img
                 src={triad.image}
                 alt={triad.imageAlt}
-                width={500}
+                width={triad.imageWidth}
+                height={triad.imageHeight}
                 loading="lazy"
-                className="w-full self-start rounded-2xl"
+                className="w-full self-center rounded-2xl"
               />
               <Step label="Soluzione:">
-                <p className="text-subtitle mt-4">
-                  {triad.solution}
-                </p>
+                <p className="text-subtitle">{triad.solution}</p>
               </Step>
               <Step label="Risultato:">
-                <p className="text-subtitle mt-4">
-                  {triad.result}
-                </p>
+                <p className="text-subtitle">{triad.result}</p>
               </Step>
             </div>
           ))}

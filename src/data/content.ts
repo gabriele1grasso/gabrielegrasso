@@ -35,6 +35,8 @@ export interface SolutionTriad {
   solution: string
   result: string
   image: string
+  imageWidth: number
+  imageHeight: number
   imageAlt: string
 }
 
@@ -104,6 +106,8 @@ export const solutionTriads: SolutionTriad[] = [
     solution: 'Una sequenza ordinata: Pannello, Pubblico, Portafoglio',
     result: 'Sai esattamente dove mettere le mani',
     image: '/soluzione-sequenza.png',
+    imageWidth: 500,
+    imageHeight: 241,
     imageAlt: 'Le quattro fasi: Pannello, Pubblico, Portafoglio, Creiamo la Campagna',
   },
   {
@@ -112,6 +116,8 @@ export const solutionTriads: SolutionTriad[] = [
     solution: 'Le metriche che contano, spiegate in modo semplice',
     result: 'Sai se sta funzionando o se serve correggere',
     image: '/soluzione-metriche.png',
+    imageWidth: 500,
+    imageHeight: 263,
     imageAlt: 'Le metriche chiave: CPM, CTR, CPA e ROAS',
   },
   {
@@ -121,6 +127,8 @@ export const solutionTriads: SolutionTriad[] = [
       'Capisci come dovrebbero essere intestati Business Manager, Pixel e Account Pubblicitario',
     result: 'Sai esattamente su cosa hai il controllo',
     image: '/soluzione-asset.png',
+    imageWidth: 500,
+    imageHeight: 215,
     imageAlt: 'Business Manager, Pixel e Account pubblicitario devono essere di tua proprietà',
   },
 ]
