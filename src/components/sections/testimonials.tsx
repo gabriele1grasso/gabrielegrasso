@@ -43,7 +43,7 @@ export function Testimonials() {
 
   return (
     <section>
-      <div className="container-page py-20 sm:py-28">
+      <div className="container-page pt-15 pb-8 lg:pt-30">
         <p className="text-muted-foreground">Dicono di me</p>
         <h2 className="text-display mt-6 max-w-4xl">
           Le parole di chi ha già lavorato con me

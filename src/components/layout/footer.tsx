@@ -21,7 +21,7 @@ export function Footer() {
 
   return (
     <footer className="bg-black text-white">
-      <div className="container-page pt-[120px] pb-16">
+      <div className="container-page pt-15 pb-12 lg:pt-30 lg:pb-16">
         <p className="text-display max-w-[950px]">Il tuo metodo per fare Meta Ads parte da qui.</p>
 
         <div className="mt-10 grid gap-8 sm:grid-cols-3 sm:gap-12">

@@ -16,7 +16,7 @@ function Step({ label, children }: { label: string; children: ReactNode }) {
 export function Solutions() {
   return (
     <section>
-      <div className="container-page py-20 sm:py-28">
+      <div className="container-page pt-7.5 pb-15 lg:pt-15 lg:pb-30">
         <p className="text-muted-foreground">Cosa risolvi</p>
         <h2 className="text-display mt-6 max-w-4xl">
           Da "non so da dove iniziare" a una direzione chiara

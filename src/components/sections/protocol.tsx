@@ -25,7 +25,7 @@ function Phases() {
 export function Protocol() {
   return (
     <section id="come-funziona" className="bg-brand-gradient scroll-mt-28">
-      <div className="container-page grid items-start gap-8 py-20 sm:py-28 lg:grid-cols-2">
+      <div className="container-page grid items-start gap-8 py-19 lg:grid-cols-2 lg:py-34">
         <div className="text-white">
           <p className="text-white/70">Cosa c'è dentro il Protocollo 3P</p>
           <h2 className="text-display mt-5 max-w-[590px]">Una sequenza chiara, dalla A alla Z</h2>

@@ -8,7 +8,7 @@ export function Methodology() {
 
   return (
     <section>
-      <div className="container-page py-20 sm:py-28">
+      <div className="container-page pt-15 pb-7.5 lg:pt-30 lg:pb-15">
         <p className="text-muted-foreground">Un percorso, non un labirinto</p>
         <h2 className="text-display mt-5 max-w-[720px]">Sai sempre qual è il prossimo passo</h2>
         <p className="mt-7.5 max-w-[615px]">

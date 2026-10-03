@@ -17,7 +17,7 @@ export function Faq() {
 
   return (
     <section id="faq" className="scroll-mt-28">
-      <div className="container-page py-20 sm:py-28">
+      <div className="container-page py-7.5 lg:py-15">
         <p className="text-muted-foreground">FAQ</p>
         <h2 className="text-display mt-5 max-w-[950px]">
           Quello che la gente mi chiede prima di acquistare.

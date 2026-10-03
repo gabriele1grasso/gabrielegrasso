@@ -5,7 +5,7 @@ import { Rating } from '@/components/sections/rating'
 export function Video() {
   return (
     <section>
-      <div className="container-page py-16">
+      <div className="container-page py-7.5 lg:py-15">
         <div className="flex flex-col items-center rounded-2xl bg-[#f2f2f2] px-5 py-16 text-center sm:px-10 sm:py-28">
           <span className="inline-flex items-center gap-1.5 rounded-full bg-white px-3.5 py-1 text-xs tracking-[0.5px] uppercase">
             <ZapIcon className="size-3 fill-[#ff6a1a] text-[#ff6a1a]" />

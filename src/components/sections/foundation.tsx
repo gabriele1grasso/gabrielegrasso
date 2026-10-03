@@ -23,7 +23,7 @@ const cardBackground = [
 export function Foundation() {
   return (
     <section>
-      <div className="container-page py-20 sm:py-28">
+      <div className="container-page pt-7.5 pb-15 lg:pt-15 lg:pb-30">
         <div
           className="grid gap-4 rounded-2xl p-6 text-white sm:p-10 lg:grid-cols-2"
           style={{ backgroundImage: cardBackground }}

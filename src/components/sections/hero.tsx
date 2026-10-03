@@ -13,7 +13,7 @@ export function Hero() {
       // Sale sotto la navbar flottante così lo sfondo viola parte dal bordo superiore.
       className="bg-brand-gradient -mt-(--header-h) pt-(--header-h) text-white"
     >
-      <div className="container-page grid items-center gap-12 py-12 sm:py-16 lg:grid-cols-[1fr_minmax(0,0.95fr)] lg:gap-10 lg:pb-24">
+      <div className="container-page grid items-center gap-12 pt-[calc(135px-var(--header-h))] pb-[84px] lg:grid-cols-[1fr_minmax(0,0.95fr)] lg:gap-10">
         <div className="flex flex-col items-start">
           <p className="text-white/75">Per imprenditori e professionisti</p>
 

@@ -11,7 +11,7 @@ const problemIcons = [ClockIcon, FrownIcon, ActivityIcon, CircleStopIcon, ChartP
 export function Problems() {
   return (
     <section>
-      <div className="container-page py-20 sm:py-28">
+      <div className="container-page pt-15 pb-12.5 lg:pt-30 lg:pb-20">
         <p className="text-muted-foreground">Il problema</p>
         <h2 className="text-display mt-6 max-w-4xl">
           Vai a tentativi, o non sai nemmeno da dove iniziare. Il Protocollo 3P ti dice cosa devi
