@@ -173,12 +173,6 @@ export const credentials = [
 
 export const methodologyPoints = [
   {
-    id: 'm1',
-    title: 'Sai sempre qual è il prossimo passo',
-    description:
-      'Il Protocollo è una sequenza di task da spuntare uno a uno. Ogni fase prepara la successiva, così vai avanti senza mai restare bloccato a chiederti cosa fare.',
-  },
-  {
     id: 'm2',
     title: 'Ti mostro dove cliccare',
     description:
@@ -194,7 +188,7 @@ export const methodologyPoints = [
     id: 'm4',
     title: 'Prima le basi, poi la campagna',
     description:
-      'Quasi tutti partono creando l’annuncio. È lì che si bloccano. Nel Protocollo la campagna arriva alla fine, quando il resto è già pronto.',
+      "Quasi tutti partono creando l'annuncio. È lì che si bloccano. Nel Protocollo la campagna arriva alla fine, quando il resto è già pronto.",
   },
 ]
 
