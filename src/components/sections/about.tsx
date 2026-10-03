@@ -72,7 +72,9 @@ function Carousel() {
 export function About() {
   return (
     <section id="chi-sono" className="bg-brand-gradient scroll-mt-(--section-offset)">
-      <div className="container-page grid gap-6 pt-15 pb-[84px] lg:grid-cols-2 lg:py-30">
+      {/* Su desktop lo sfondo è alto almeno quanto lo schermo e le card, con le loro dimensioni
+          naturali, stanno centrate in verticale. */}
+      <div className="container-page grid content-center gap-6 pt-15 pb-[84px] lg:min-h-svh lg:grid-cols-2 lg:py-6">
         <div className="flex min-w-0 flex-col rounded-2xl bg-white p-6 sm:p-12 sm:pb-[72px]">
           <p className="text-muted-foreground">Chi c'è dietro il Protocollo 3P</p>
           <h2 className="text-display mt-5.5">Gabriele Grasso</h2>
