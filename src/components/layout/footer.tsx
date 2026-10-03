@@ -14,7 +14,7 @@ const legalLinks = [
   { to: '/cookie-policy', label: 'Cookie Policy' },
 ]
 
-const labelClass = 'font-bold text-white/35'
+const labelClass = 'font-bold text-white/55'
 
 export function Footer() {
   const year = new Date().getFullYear()
@@ -67,7 +67,7 @@ export function Footer() {
               ))}
             </ul>
           </div>
-          <div className="flex max-w-[422px] flex-col gap-4 text-white/35">
+          <div className="flex max-w-[422px] flex-col gap-4 text-white/55">
             <p>Direzione Digitale è un marchio di Linker srl unipersonale</p>
             <p>P.IVA 04938400878</p>
             <p>© {year} Linker srl unipersonale</p>

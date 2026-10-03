@@ -2,7 +2,12 @@ import { LegalPage } from '@/components/layout/legal-page'
 
 export function TerminiPage() {
   return (
-    <LegalPage title="Termini e Condizioni" updatedAt="27 agosto 2026">
+    <LegalPage
+      title="Termini e Condizioni"
+      description="Condizioni di vendita e di utilizzo del Protocollo 3P, il prodotto digitale di Gabriele Grasso."
+      path="/termini-e-condizioni"
+      updatedAt="27 agosto 2026"
+    >
       <section>
         <h2 className="text-lg font-semibold text-foreground">1. Oggetto</h2>
         <p className="text-muted-foreground mt-2">

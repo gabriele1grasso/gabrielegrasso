@@ -53,7 +53,7 @@ export function PricingCard() {
       </Button>
 
       <div className="mt-8 flex flex-col items-center">
-        <div className="flex gap-2" aria-label="5 stelle su 5">
+        <div className="flex gap-2" role="img" aria-label="5 stelle su 5">
           {Array.from({ length: 5 }, (_, i) => (
             <StarIcon key={i} className="size-3.5 fill-current" />
           ))}

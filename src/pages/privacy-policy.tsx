@@ -2,7 +2,12 @@ import { LegalPage } from '@/components/layout/legal-page'
 
 export function PrivacyPolicyPage() {
   return (
-    <LegalPage title="Privacy Policy" updatedAt="27 agosto 2026">
+    <LegalPage
+      title="Privacy Policy"
+      description="Come vengono raccolti e trattati i dati personali su gabrielegrasso.com e nell’acquisto del Protocollo 3P."
+      path="/privacy-policy"
+      updatedAt="27 agosto 2026"
+    >
       <section>
         <h2 className="text-lg font-semibold text-foreground">1. Titolare del trattamento</h2>
         <p className="text-muted-foreground mt-2">

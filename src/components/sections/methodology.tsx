@@ -1,5 +1,6 @@
 import { CircleCheckFilledIcon, FlagFilledIcon } from '@/components/icons/filled'
 import { methodologyPoints } from '@/data/content'
+import { srcSetFor } from '@/lib/images'
 
 const sideIcons = [CircleCheckFilledIcon, FlagFilledIcon]
 
@@ -24,7 +25,9 @@ export function Methodology() {
             <div className="relative flex-1 overflow-hidden rounded-2xl">
               <div className="aspect-[851/415]" />
               <img
-                src="/metodo-dove-cliccare.png"
+                src="/metodo-dove-cliccare.webp"
+                srcSet={srcSetFor('/metodo-dove-cliccare.webp', 1280)}
+                sizes="(min-width: 1024px) 66vw, 100vw"
                 alt="Screenshot con i punti esatti dove cliccare per creare un portfolio business in Meta Business Suite"
                 width={1280}
                 height={625}

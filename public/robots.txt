@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /grazie
+
+Sitemap: https://gabrielegrasso.com/sitemap.xml

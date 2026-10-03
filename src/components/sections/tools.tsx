@@ -1,6 +1,7 @@
 import { CalculatorIcon, ImageIcon } from 'lucide-react'
 
 import { tools } from '@/data/content'
+import { srcSetFor } from '@/lib/images'
 
 const icons = {
   t1: CalculatorIcon,
@@ -21,7 +22,9 @@ export function ToolsCard() {
       </p>
 
       <img
-        src="/strumenti-video.png"
+        src="/strumenti-video.webp"
+        srcSet={srcSetFor('/strumenti-video.webp', 1000)}
+        sizes="(min-width: 1024px) 560px, 100vw"
         alt="Video guida: Gabriele imposta il pubblico di un gruppo di inserzioni in Ads Manager"
         width={1000}
         height={694}

@@ -2,7 +2,12 @@ import { LegalPage } from '@/components/layout/legal-page'
 
 export function CookiePolicyPage() {
   return (
-    <LegalPage title="Cookie Policy" updatedAt="27 agosto 2026">
+    <LegalPage
+      title="Cookie Policy"
+      description="Quali cookie usa gabrielegrasso.com, a cosa servono e come gestire le tue preferenze."
+      path="/cookie-policy"
+      updatedAt="27 agosto 2026"
+    >
       <section>
         <h2 className="text-lg font-semibold text-foreground">1. Cosa sono i cookie</h2>
         <p className="text-muted-foreground mt-2">

@@ -33,7 +33,7 @@ function Logo() {
       className="ml-2 block shrink-0 sm:ml-[23px]"
       aria-label="Gabriele Grasso — Home"
     >
-      <img src="/logo.png" alt="gabrielegrasso." width={576} height={193} className="h-10 w-auto sm:h-[46px]" />
+      <img src="/logo.webp" alt="gabrielegrasso." width={288} height={97} className="h-10 w-auto sm:h-[46px]" />
     </Link>
   )
 }

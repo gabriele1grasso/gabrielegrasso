@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
+@import '@fontsource-variable/inter-tight';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -82,7 +83,7 @@
   --radius-xl: calc(var(--radius) + 4px);
 
   --font-sans:
-    'Inter Tight', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    'Inter Tight Variable', ui-sans-serif, system-ui, -apple-system, sans-serif;
 
   --container-7xl: 80rem;
 }

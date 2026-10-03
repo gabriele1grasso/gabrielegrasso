@@ -4,6 +4,7 @@ import {
   UserVoiceFilledIcon,
 } from '@/components/icons/filled'
 import { foundationPoints } from '@/data/content'
+import { srcSetFor } from '@/lib/images'
 
 const pointIcons = [
   ChartBarsFilledIcon,
@@ -56,7 +57,9 @@ export function Foundation() {
           {/* L'immagine segue l'altezza della colonna di testo, ritagliata da sinistra */}
           <div className="relative aspect-[632/501] overflow-hidden rounded-2xl lg:aspect-auto">
             <img
-              src="/fondamenta-checklist.png"
+              src="/fondamenta-checklist.webp"
+              srcSet={srcSetFor('/fondamenta-checklist.webp', 1280)}
+              sizes="(min-width: 1024px) 50vw, 100vw"
               alt="La checklist del Protocollo 3P completata al 100%: puoi lanciare la campagna con controllo"
               width={1280}
               height={612}

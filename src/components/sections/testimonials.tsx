@@ -1,17 +1,15 @@
-import { useQuery } from '@tanstack/react-query'
 import { StarIcon } from 'lucide-react'
 import { Fragment } from 'react'
 
-import { Skeleton } from '@/components/ui/skeleton'
-import { fetchTestimonials } from '@/data/api'
-import type { Testimonial } from '@/data/content'
+import { testimonials, type Testimonial } from '@/data/content'
+import { srcSetFor } from '@/lib/images'
 
 const cardClass = 'flex flex-col rounded-2xl border p-8'
 
 function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
     <figure className={cardClass}>
-      <div className="flex gap-1.5" aria-label="5 stelle su 5">
+      <div className="flex gap-1.5" role="img" aria-label="5 stelle su 5">
         {Array.from({ length: 5 }, (_, i) => (
           <StarIcon key={i} className="fill-accent text-accent size-4" />
         ))}
@@ -21,6 +19,8 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
       </blockquote>
       <img
         src={testimonial.image}
+        srcSet={srcSetFor(testimonial.image, testimonial.imageWidth)}
+        sizes="(min-width: 768px) 50vw, 100vw"
         alt={`Messaggio WhatsApp di ${testimonial.name}`}
         width={testimonial.imageWidth}
         height={testimonial.imageHeight}
@@ -36,11 +36,6 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
 }
 
 export function Testimonials() {
-  const { data, isLoading } = useQuery({
-    queryKey: ['testimonials'],
-    queryFn: fetchTestimonials,
-  })
-
   return (
     <section>
       <div className="container-page pt-15 pb-8 lg:pt-30">
@@ -51,17 +46,7 @@ export function Testimonials() {
         <p className="mt-8">Feedback di imprenditori e professionisti che mi conoscono.</p>
 
         <div className="mt-16 grid gap-8 md:grid-cols-2">
-          {isLoading &&
-            Array.from({ length: 4 }, (_, i) => (
-              <div key={i} className={cardClass}>
-                <Skeleton className="h-5 w-32" />
-                <Skeleton className="mt-8 h-7 w-full" />
-                <Skeleton className="mt-2 h-7 w-2/3" />
-                <Skeleton className="mt-8 aspect-[4/3] w-full" />
-              </div>
-            ))}
-
-          {data?.map((testimonial, i) => (
+          {testimonials.map((testimonial, i) => (
             <Fragment key={testimonial.id}>
               <TestimonialCard testimonial={testimonial} />
               {/* Fascia a tutta larghezza dopo la prima coppia di testimonianze */}

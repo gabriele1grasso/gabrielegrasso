@@ -4,6 +4,7 @@ import { CalculatorIcon, RefreshCwIcon, SquarePlayIcon } from 'lucide-react'
 import { Rating } from '@/components/sections/rating'
 import { Button } from '@/components/ui/button'
 import { heroFeatures } from '@/data/content'
+import { srcSetFor } from '@/lib/images'
 
 const featureIcons = [SquarePlayIcon, CalculatorIcon, RefreshCwIcon]
 
@@ -48,7 +49,10 @@ export function Hero() {
         </div>
 
         <img
-          src="/hero-protocollo.png"
+          src="/hero-protocollo.webp"
+          srcSet={srcSetFor('/hero-protocollo.webp', 1000)}
+          sizes="(min-width: 1024px) 560px, 100vw"
+          fetchPriority="high"
           alt="Anteprima del Protocollo 3P: la checklist per rimettere in ordine Meta Ads"
           width={1000}
           height={868}
