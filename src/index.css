@@ -85,6 +85,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    line-height: 1.4;
     font-feature-settings:
       'cv02',
       'cv03',
@@ -96,16 +97,86 @@
   h3,
   h4 {
     font-weight: 800;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.5px;
     line-height: 1.1;
   }
+}
+
+/* Scala tipografica misurata sul sito originale (1440px → 375px). */
+@utility text-display {
+  /* Titoli di sezione: 64px desktop, ~34px mobile */
+  font-size: clamp(34px, 4.5vw + 17px, 64px);
+  font-weight: 800;
+  line-height: 1.065;
+  letter-spacing: -0.5px;
+}
+@utility text-display-sm {
+  /* Titolo della sezione video: 48px desktop, ~38px mobile */
+  font-size: clamp(38px, 1.5vw + 32.5px, 48px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+@utility text-title {
+  /* Titoli delle card */
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+@utility text-quote {
+  /* Citazioni delle testimonianze e fasce di testo */
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.11;
+  letter-spacing: -0.5px;
+}
+@utility text-subtitle {
+  /* Soluzione/risultato, domande FAQ, fasi: 20px desktop, ~17.5px mobile */
+  font-size: clamp(17.5px, 0.4vw + 16px, 20px);
+  font-weight: 800;
+  line-height: 1.11;
+  letter-spacing: -0.5px;
+}
+@utility text-feature {
+  /* Voci delle liste con icona */
+  font-size: 15.2px;
+  line-height: 1.4;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+  /* Sfumatura viola del sito originale: chiaro in alto a sinistra e in basso a destra,
+     più saturo al centro-alto. */
+  .bg-brand-gradient {
+    background:
+      radial-gradient(ellipse 45% 40% at 68% 12%, #6440e2 0%, transparent 100%),
+      radial-gradient(ellipse 40% 45% at 100% 100%, #ece8fd 0%, transparent 100%),
+      radial-gradient(ellipse 35% 35% at 0% 0%, #d2c9f7 0%, transparent 100%),
+      linear-gradient(135deg, #b4a5f1 0%, #8a72ec 40%, #7b60ea 65%, #b2a1f2 100%);
+  }
   .container-page {
-    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-10 lg:px-16;
+  }
+}
+
+/* Carosello che scorre da solo: la traccia contiene due copie degli elementi
+   e si sposta di metà della sua larghezza, così il loop è continuo. */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@utility animate-marquee {
+  animation: marquee 30s linear infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
   }
 }

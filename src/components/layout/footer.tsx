@@ -16,12 +16,7 @@ export function Footer() {
       <div className="container-page flex flex-col gap-10 py-16">
         <div className="flex flex-col justify-between gap-10 md:flex-row md:items-start">
           <div className="max-w-sm">
-            <span className="flex items-center gap-2 font-semibold tracking-tight">
-              <span className="bg-accent text-accent-foreground flex size-8 items-center justify-center rounded-md text-sm font-bold">
-                GG
-              </span>
-              Direzione Digitale
-            </span>
+            <img src="/logo.png" alt="gabrielegrasso." width={576} height={193} className="h-12 w-auto" />
             <p className="text-muted-foreground mt-4 text-xl font-semibold">
               Il tuo metodo per fare Meta Ads parte da qui
             </p>

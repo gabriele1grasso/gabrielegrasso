@@ -12,67 +12,72 @@ const navLinks = [
   { href: '/#faq', label: 'FAQ' },
 ]
 
+function Logo() {
+  return (
+    <Link to="/" className="block shrink-0" aria-label="Gabriele Grasso — Home">
+      <img src="/logo.png" alt="gabrielegrasso." width={576} height={193} className="h-10 w-auto sm:h-[46px]" />
+    </Link>
+  )
+}
+
 export function Header() {
   const mobileNavOpen = useUIStore((s) => s.mobileNavOpen)
   const setMobileNavOpen = useUIStore((s) => s.setMobileNavOpen)
 
   return (
-    <header className="bg-background/80 sticky top-0 z-40 w-full border-b backdrop-blur-md">
-      <div className="container-page flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 font-semibold tracking-tight">
-          <span className="bg-accent text-accent-foreground flex size-8 items-center justify-center rounded-md text-sm font-bold">
-            GG
-          </span>
-          <span className="hidden sm:inline">Direzione Digitale</span>
-        </Link>
+    <header className="sticky top-0 z-40 w-full pt-4">
+      <div className="container-page">
+        <div className="flex items-center justify-between h-[76px] rounded-2xl bg-white px-4 shadow-[0_8px_30px_rgba(94,65,227,0.12)] sm:h-[93px]">
+          <Logo />
 
-        <nav className="hidden items-center gap-8 md:flex">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-muted-foreground hover:text-foreground text-sm font-medium transition-colors"
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
+          <nav className="hidden items-center gap-6 lg:flex">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="hover:text-accent text-[16.8px] text-[#1c1c1c] transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
 
-        <div className="hidden md:block">
-          <Button asChild variant="accent" size="sm">
-            <a href="/#pricing">Inizia il Protocollo 3P</a>
-          </Button>
-        </div>
-
-        <Sheet open={mobileNavOpen} onOpenChange={setMobileNavOpen}>
-          <SheetTrigger asChild>
-            <Button variant="ghost" size="icon" className="md:hidden" aria-label="Apri menu">
-              <MenuIcon className="size-5" />
+          <div className="hidden lg:block">
+            <Button asChild variant="accent" size="lg" className="font-extrabold tracking-[-0.5px]">
+              <a href="/#pricing">Inizia il Protocollo 3P</a>
             </Button>
-          </SheetTrigger>
-          <SheetContent side="right" className="w-3/4 sm:max-w-xs">
-            <SheetHeader>
-              <SheetTitle>Menu</SheetTitle>
-            </SheetHeader>
-            <nav className="flex flex-col gap-1 px-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMobileNavOpen(false)}
-                  className="hover:bg-secondary rounded-md px-3 py-3 text-base font-medium"
-                >
-                  {link.label}
-                </a>
-              ))}
-              <Button asChild variant="accent" className="mt-4">
-                <a href="/#pricing" onClick={() => setMobileNavOpen(false)}>
-                  Inizia il Protocollo 3P
-                </a>
+          </div>
+
+          <Sheet open={mobileNavOpen} onOpenChange={setMobileNavOpen}>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" className="lg:hidden" aria-label="Apri menu">
+                <MenuIcon className="size-6" />
               </Button>
-            </nav>
-          </SheetContent>
-        </Sheet>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-3/4 sm:max-w-xs">
+              <SheetHeader>
+                <SheetTitle>Menu</SheetTitle>
+              </SheetHeader>
+              <nav className="flex flex-col gap-1 px-4">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMobileNavOpen(false)}
+                    className="hover:bg-secondary rounded-md px-3 py-3 text-base font-medium"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+                <Button asChild variant="accent" className="mt-4 font-bold">
+                  <a href="/#pricing" onClick={() => setMobileNavOpen(false)}>
+                    Inizia il Protocollo 3P
+                  </a>
+                </Button>
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </header>
   )

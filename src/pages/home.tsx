@@ -10,7 +10,6 @@ import { Problems } from '@/components/sections/problems'
 import { Protocol } from '@/components/sections/protocol'
 import { Solutions } from '@/components/sections/solutions'
 import { Testimonials } from '@/components/sections/testimonials'
-import { Tools } from '@/components/sections/tools'
 import { Video } from '@/components/sections/video'
 
 export function HomePage() {
@@ -19,7 +18,6 @@ export function HomePage() {
       <Hero />
       <Problems />
       <Contains />
-      <Tools />
       <Video />
       <Solutions />
       <Testimonials />

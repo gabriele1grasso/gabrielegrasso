@@ -1,9 +1,39 @@
 import { useQuery } from '@tanstack/react-query'
+import { StarIcon } from 'lucide-react'
+import { Fragment } from 'react'
 
-import { SectionHeading } from '@/components/sections/section-heading'
-import { Card, CardContent } from '@/components/ui/card'
 import { Skeleton } from '@/components/ui/skeleton'
 import { fetchTestimonials } from '@/data/api'
+import type { Testimonial } from '@/data/content'
+
+const cardClass = 'flex flex-col rounded-2xl border p-8'
+
+function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
+  return (
+    <figure className={cardClass}>
+      <div className="flex gap-1.5" aria-label="5 stelle su 5">
+        {Array.from({ length: 5 }, (_, i) => (
+          <StarIcon key={i} className="fill-accent text-accent size-4" />
+        ))}
+      </div>
+      <blockquote className="text-quote mt-6">
+        "{testimonial.quote}"
+      </blockquote>
+      <img
+        src={testimonial.image}
+        alt={`Messaggio WhatsApp di ${testimonial.name}`}
+        width={testimonial.imageWidth}
+        height={testimonial.imageHeight}
+        loading="lazy"
+        className="mt-8 w-full"
+      />
+      <figcaption className="mt-auto pt-10">
+        <p className="font-bold">{testimonial.name}</p>
+        <p className="text-muted-foreground text-sm">{testimonial.role}</p>
+      </figcaption>
+    </figure>
+  )
+}
 
 export function Testimonials() {
   const { data, isLoading } = useQuery({
@@ -12,52 +42,35 @@ export function Testimonials() {
   })
 
   return (
-    <section className="border-b">
-      <div className="container-page py-20">
-        <SectionHeading
-          eyebrow="Dicono di me"
-          title="Le parole di chi ha già lavorato con me"
-          description="Feedback di imprenditori e professionisti che mi conoscono."
-        />
+    <section>
+      <div className="container-page py-20 sm:py-28">
+        <p className="text-muted-foreground">Dicono di me</p>
+        <h2 className="text-display mt-6 max-w-4xl">
+          Le parole di chi ha già lavorato con me
+        </h2>
+        <p className="mt-8">Feedback di imprenditori e professionisti che mi conoscono.</p>
 
-        <div className="mx-auto mt-12 grid max-w-3xl gap-6 sm:grid-cols-2">
+        <div className="mt-16 grid gap-8 md:grid-cols-2">
           {isLoading &&
-            Array.from({ length: 4 }).map((_, i) => (
-              <Card key={i}>
-                <CardContent className="pt-6">
-                  <Skeleton className="h-4 w-full" />
-                  <Skeleton className="mt-2 h-4 w-3/4" />
-                  <div className="mt-6 flex items-center gap-3">
-                    <Skeleton className="size-10 rounded-full" />
-                    <div className="space-y-2">
-                      <Skeleton className="h-3 w-24" />
-                      <Skeleton className="h-3 w-32" />
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+            Array.from({ length: 4 }, (_, i) => (
+              <div key={i} className={cardClass}>
+                <Skeleton className="h-5 w-32" />
+                <Skeleton className="mt-8 h-7 w-full" />
+                <Skeleton className="mt-2 h-7 w-2/3" />
+                <Skeleton className="mt-8 aspect-[4/3] w-full" />
+              </div>
             ))}
 
-          {data?.map((testimonial) => (
-            <Card key={testimonial.id}>
-              <CardContent className="pt-6">
-                {testimonial.highlight && (
-                  <p className="text-accent mb-3 text-sm font-semibold">
-                    {testimonial.highlight}
-                  </p>
-                )}
-                <p className="text-lg">“{testimonial.quote}”</p>
-                <div className="mt-6 flex items-center gap-3">
-                  <span className="bg-accent/10 text-accent flex size-10 items-center justify-center rounded-full text-sm font-semibold">
-                    {testimonial.initials}
-                  </span>
-                  <div>
-                    <p className="text-sm font-semibold">{testimonial.name}</p>
-                    <p className="text-muted-foreground text-sm">{testimonial.role}</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+          {data?.map((testimonial, i) => (
+            <Fragment key={testimonial.id}>
+              <TestimonialCard testimonial={testimonial} />
+              {/* Fascia a tutta larghezza dopo la prima coppia di testimonianze */}
+              {i === 1 && (
+                <p className="text-quote rounded-2xl bg-[#f2f2f2] px-6 py-10 text-center md:col-span-2">
+                  Quello che sembrava complicato, adesso è chiaro.
+                </p>
+              )}
+            </Fragment>
           ))}
         </div>
       </div>

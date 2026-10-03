@@ -3,8 +3,10 @@ export interface Testimonial {
   quote: string
   name: string
   role: string
-  initials: string
-  highlight?: string
+  /** Screenshot della conversazione WhatsApp */
+  image: string
+  imageWidth: number
+  imageHeight: number
 }
 
 export interface FaqItem {
@@ -32,6 +34,8 @@ export interface SolutionTriad {
   problem: string
   solution: string
   result: string
+  image: string
+  imageAlt: string
 }
 
 export const heroFeatures = [
@@ -84,12 +88,12 @@ export const tools = [
   {
     id: 't1',
     title: 'Calcolatore di budget',
-    description: 'Sai quanto investire prima di pubblicare.',
+    description: 'Sai quanto investire prima di pubblicare',
   },
   {
     id: 't2',
     title: '500+ creatività Canva',
-    description: 'Parti da un format pronto, non da zero.',
+    description: 'Parti da un format pronto, non da zero',
   },
 ]
 
@@ -99,12 +103,16 @@ export const solutionTriads: SolutionTriad[] = [
     problem: 'Non sai da dove iniziare',
     solution: 'Una sequenza ordinata: Pannello, Pubblico, Portafoglio',
     result: 'Sai esattamente dove mettere le mani',
+    image: '/soluzione-sequenza.png',
+    imageAlt: 'Le quattro fasi: Pannello, Pubblico, Portafoglio, Creiamo la Campagna',
   },
   {
     id: 's2',
     problem: 'Non sai leggere i risultati',
     solution: 'Le metriche che contano, spiegate in modo semplice',
     result: 'Sai se sta funzionando o se serve correggere',
+    image: '/soluzione-metriche.png',
+    imageAlt: 'Le metriche chiave: CPM, CTR, CPA e ROAS',
   },
   {
     id: 's3',
@@ -112,6 +120,8 @@ export const solutionTriads: SolutionTriad[] = [
     solution:
       'Capisci come dovrebbero essere intestati Business Manager, Pixel e Account Pubblicitario',
     result: 'Sai esattamente su cosa hai il controllo',
+    image: '/soluzione-asset.png',
+    imageAlt: 'Business Manager, Pixel e Account pubblicitario devono essere di tua proprietà',
   },
 ]
 
@@ -121,29 +131,36 @@ export const testimonials: Testimonial[] = [
     quote: 'Sono riuscita ad attivare una sponsorizzata da sola',
     name: 'Emanuela P.',
     role: 'Social Media Manager',
-    initials: 'EP',
+    image: '/testimonianza-emanuela.webp',
+    imageWidth: 1000,
+    imageHeight: 683,
   },
   {
     id: 't2',
     quote: 'Permette anche a chi parte da zero di acquisire autonomia e sicurezza',
     name: 'Grazia L.',
     role: 'Commercialista',
-    initials: 'GL',
+    image: '/testimonianza-grazia.webp',
+    imageWidth: 1000,
+    imageHeight: 882,
   },
   {
     id: 't3',
     quote: 'Più che semplici lezioni teoriche, è stato un vero e proprio training on the job.',
     name: 'Ilaria M.',
     role: 'Digital Specialist',
-    initials: 'IM',
-    highlight: 'Quello che sembrava complicato, adesso è chiaro.',
+    image: '/testimonianza-ilaria.webp',
+    imageWidth: 1000,
+    imageHeight: 908,
   },
   {
     id: 't4',
     quote: 'Ho apprezzato il tuo modo di spiegare le cose in maniera chiara e concreta.',
     name: 'Marta S.',
     role: 'Freelance',
-    initials: 'MS',
+    image: '/testimonianza-marta.webp',
+    imageWidth: 1000,
+    imageHeight: 1120,
   },
 ]
 

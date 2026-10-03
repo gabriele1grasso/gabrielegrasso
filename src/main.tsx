@@ -15,6 +15,12 @@ const queryClient = new QueryClient({
   },
 })
 
+// In sviluppo l'HMR ricarica i moduli (es. src/data/content.ts) ma non la cache delle query:
+// senza invalidarla le sezioni continuerebbero a mostrare i dati vecchi fino a un reload.
+if (import.meta.hot) {
+  import.meta.hot.on('vite:afterUpdate', () => queryClient.invalidateQueries())
+}
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
