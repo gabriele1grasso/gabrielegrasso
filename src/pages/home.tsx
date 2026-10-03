@@ -5,7 +5,6 @@ import { FinalCta } from '@/components/sections/final-cta'
 import { Foundation } from '@/components/sections/foundation'
 import { Hero } from '@/components/sections/hero'
 import { Methodology } from '@/components/sections/methodology'
-import { Pricing } from '@/components/sections/pricing'
 import { Problems } from '@/components/sections/problems'
 import { Protocol } from '@/components/sections/protocol'
 import { Solutions } from '@/components/sections/solutions'
@@ -25,7 +24,6 @@ export function HomePage() {
       <Methodology />
       <Foundation />
       <Protocol />
-      <Pricing />
       <Faq />
       <FinalCta />
     </>

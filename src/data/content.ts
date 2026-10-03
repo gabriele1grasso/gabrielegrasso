@@ -203,33 +203,33 @@ export const phases: Phase[] = [
   {
     id: 'pannello',
     number: '01',
-    title: 'Pannello',
+    title: 'Pannello: la configurazione che rende tutto possibile',
     description:
-      'La configurazione che rende tutto possibile. Differenza tra ambiente semplificato e Business Manager professionale. Configuri account, Pagina, Instagram e account pubblicitario intestati a te. Crei il Pixel, gestisci accessi e collaboratori, imposti pagamento e fatturazione.',
+      'Differenza tra ambiente semplificato e Business Manager professionale. Configuri account, Pagina, Instagram e account pubblicitario intestati a te. Crei il Pixel, gestisci accessi e collaboratori, imposti pagamento e fatturazione.',
     result: 'Hai accesso a tutte le opzioni, non alla versione ridotta.',
   },
   {
     id: 'pubblico',
     number: '02',
-    title: 'Pubblico',
+    title: 'Pubblico: la strategia prima della campagna',
     description:
-      'La strategia prima della campagna. Le tre fasi del funnel e l’obiettivo giusto per la tua. Costruisci il profilo del cliente ideale con problemi, desideri e obiezioni reali. Definisci cosa ti rende diverso e scegli gli angoli da testare.',
+      'Le tre fasi del funnel e l’obiettivo giusto per la tua. Costruisci il profilo del cliente ideale con problemi, desideri e obiezioni reali. Definisci cosa ti rende diverso e scegli gli angoli da testare.',
     result: 'Non scrivi più annunci a caso: parli a una persona precisa.',
   },
   {
     id: 'portafoglio',
     number: '03',
-    title: 'Portafoglio',
+    title: 'Portafoglio: budget, metriche e decisioni',
     description:
-      'Budget, metriche e decisioni. Come Meta vende lo spazio e perché i costi variano. Stimi il budget, calcoli il punto di pareggio, leggi le metriche che contano e sai diagnosticare una campagna quando i risultati non arrivano.',
+      'Come Meta vende lo spazio e perché i costi variano. Stimi il budget, calcoli il punto di pareggio, leggi le metriche che contano e sai diagnosticare una campagna quando i risultati non arrivano.',
     result: 'Sai quanto spendere e come leggere quello che succede.',
   },
   {
     id: 'campagna',
     number: '04',
-    title: 'La campagna',
+    title: 'La campagna: ci arrivi già preparato',
     description:
-      'Ci arrivi già preparato. Crei la campagna con l’obiettivo giusto, imposti pubblico, posizionamenti, budget e schedulazione. Carichi le creatività sull’angolo scelto e dai un nome riconoscibile a ogni campagna.',
+      'Crei la campagna con l’obiettivo giusto, imposti pubblico, posizionamenti, budget e schedulazione. Carichi le creatività sull’angolo scelto e dai un nome riconoscibile a ogni campagna.',
     result: 'Non speri più che funzioni. Lavori con un metodo.',
   },
 ]

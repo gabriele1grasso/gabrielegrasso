@@ -1,11 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion'
+import { Button } from '@/components/ui/button'
+import { CardAccordion, CardAccordionItem } from '@/components/ui/card-accordion'
 import { Skeleton } from '@/components/ui/skeleton'
 import { fetchFaqs } from '@/data/api'
 import { useUIStore } from '@/store/ui-store'
@@ -20,53 +16,51 @@ export function Faq() {
   const setOpenFaqId = useUIStore((s) => s.setOpenFaqId)
 
   return (
-    <section id="faq" className="scroll-mt-16">
-      <div className="container-page py-20">
-        <div className="mx-auto max-w-2xl text-center">
-          <span className="text-accent text-sm font-semibold uppercase tracking-wide">FAQ</span>
-          <h2 className="mt-2 text-[26px] sm:text-[34px]">Domande frequenti</h2>
-          <p className="text-muted-foreground mt-4 text-lg">
-            Quello che la gente mi chiede prima di acquistare.
-          </p>
-        </div>
+    <section id="faq" className="scroll-mt-28">
+      <div className="container-page py-20 sm:py-28">
+        <p className="text-muted-foreground">FAQ</p>
+        <h2 className="text-display mt-5 max-w-[950px]">
+          Quello che la gente mi chiede prima di acquistare.
+        </h2>
 
-        <div className="mx-auto mt-12 max-w-3xl">
+        <div className="mt-15">
           {isLoading && (
-            <div className="space-y-4">
-              {Array.from({ length: 4 }).map((_, i) => (
-                <Skeleton key={i} className="h-14 w-full" />
+            <div className="flex flex-col gap-2">
+              {Array.from({ length: 6 }, (_, i) => (
+                <Skeleton key={i} className="h-[70px] w-full rounded-2xl" />
               ))}
             </div>
           )}
 
           {data && (
-            <Accordion
+            <CardAccordion
               type="single"
               collapsible
-              value={openFaqId ?? undefined}
+              value={openFaqId ?? ''}
               onValueChange={(value) => setOpenFaqId(value || null)}
             >
               {data.map((faq) => (
-                <AccordionItem key={faq.id} value={faq.id}>
-                  <AccordionTrigger>{faq.question}</AccordionTrigger>
-                  <AccordionContent>{faq.answer}</AccordionContent>
-                </AccordionItem>
+                <CardAccordionItem
+                  key={faq.id}
+                  value={faq.id}
+                  title={faq.question}
+                  className="rounded-2xl bg-[#f2f2f2]"
+                >
+                  <p>{faq.answer}</p>
+                </CardAccordionItem>
               ))}
-            </Accordion>
+            </CardAccordion>
           )}
         </div>
 
-        <div className="mx-auto mt-12 flex max-w-2xl flex-col items-center gap-2 text-center">
-          <p className="font-medium">Hai ancora dubbi?</p>
-          <p className="text-muted-foreground text-sm">
-            Non esitare a contattarmi, sarò felice di risponderti.
-          </p>
-          <a
-            href="mailto:info@gabrielegrasso.com"
-            className="text-accent mt-1 text-sm font-semibold hover:underline"
-          >
-            Contattami
-          </a>
+        <div className="mt-10 flex flex-col gap-6 border-t pt-10 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="font-bold">Hai ancora dubbi?</p>
+            <p>Non esitare a contattarmi, sarò felice di risponderti.</p>
+          </div>
+          <Button asChild variant="accent" size="lg" className="self-start sm:self-auto">
+            <a href="mailto:info@gabrielegrasso.com">Contattami</a>
+          </Button>
         </div>
       </div>
     </section>

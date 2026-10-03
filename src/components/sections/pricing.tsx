@@ -1,58 +1,68 @@
 import { Link } from '@tanstack/react-router'
-import { CheckIcon, ShieldCheckIcon } from 'lucide-react'
+import { StarIcon } from 'lucide-react'
 
+import {
+  CardRefundFilledIcon,
+  DocumentsFilledIcon,
+  LockOpenFilledIcon,
+  ScreenPlayFilledIcon,
+} from '@/components/icons/filled'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
 import { checklistFeatures } from '@/data/content'
 
-export function Pricing() {
+const featureIcons = [
+  ScreenPlayFilledIcon,
+  LockOpenFilledIcon,
+  DocumentsFilledIcon,
+  CardRefundFilledIcon,
+]
+
+export function PricingCard() {
   return (
-    <section id="pricing" className="border-b scroll-mt-16">
-      <div className="container-page py-20">
-        <Card className="mx-auto max-w-2xl overflow-hidden border-2">
-          <CardContent className="flex flex-col items-center gap-6 pt-10 text-center">
-            <span className="bg-accent/10 text-accent inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-medium">
-              <ShieldCheckIcon className="size-4" />
-              La Checklist Protocollo 3P
-            </span>
+    <div
+      id="pricing"
+      className="flex scroll-mt-28 flex-col rounded-2xl bg-white p-6 pb-12 text-[#010101] sm:p-10 sm:pb-12"
+    >
+      <p className="text-[#010101]/70">La Checklist Protocollo 3P</p>
+      <h2 className="text-display mt-7.5 leading-[1.4]">Tutto il metodo, in un'unica guida</h2>
+      <p className="mt-7.5">
+        La guida operativa completa: dalla configurazione del Portfolio Business alla campagna
+        attiva. Ogni task spiegata nel come e nel perché, per muoverti senza dipendere da nessuno.
+      </p>
 
-            <h2 className="text-[26px] sm:text-[34px]">Tutto il metodo, in un’unica guida</h2>
+      {/* Due colonne riempite dall'alto in basso, come nell'originale */}
+      <ul className="mt-8 grid gap-y-[15px] sm:grid-flow-col sm:grid-cols-2 sm:grid-rows-2 sm:gap-x-[17px]">
+        {checklistFeatures.map((feature, i) => {
+          const Icon = featureIcons[i]
+          return (
+            <li key={feature} className="text-feature flex items-start gap-[11px] font-bold">
+              <Icon className="mt-[3px] size-[17px] shrink-0" />
+              <span>{feature}</span>
+            </li>
+          )
+        })}
+      </ul>
 
-            <p className="text-muted-foreground max-w-lg">
-              La guida operativa completa: dalla configurazione del Portfolio Business alla
-              campagna attiva. Ogni task spiegata nel come e nel perché, per muoverti senza
-              dipendere da nessuno.
-            </p>
+      <hr className="mt-8 border-black/15" />
 
-            <ul className="grid w-full gap-3 text-left sm:grid-cols-2">
-              {checklistFeatures.map((feature) => (
-                <li key={feature} className="flex items-start gap-2 text-sm">
-                  <CheckIcon className="text-accent mt-0.5 size-4 shrink-0" />
-                  {feature}
-                </li>
-              ))}
-            </ul>
+      <p className="text-display mt-7">24,90 EUR</p>
+      <p className="mt-2.5 text-lg text-[#010101]/55">IVA inclusa · Pagamento unico</p>
+      <p className="mt-4 text-[#010101]/55">
+        Il punto di partenza più accessibile per iniziare nel modo giusto.
+      </p>
 
-            <div className="flex items-end gap-2">
-              <span className="text-5xl font-bold">24,90€</span>
-              <span className="text-muted-foreground mb-1.5 text-sm">
-                IVA inclusa · Pagamento unico
-              </span>
-            </div>
-            <p className="text-muted-foreground -mt-4 text-sm">
-              Il punto di partenza più accessibile per iniziare nel modo giusto.
-            </p>
+      <Button asChild variant="accent" size="lg" className="mt-5 self-center">
+        <Link to="/grazie">Inizia ora il Protocollo 3P</Link>
+      </Button>
 
-            <Button asChild size="lg" variant="accent" className="w-full sm:w-auto">
-              <Link to="/grazie">Inizia ora il Protocollo 3P</Link>
-            </Button>
-
-            <p className="text-muted-foreground flex items-center gap-2 text-xs">
-              +250 imprenditori e professionisti soddisfatti
-            </p>
-          </CardContent>
-        </Card>
+      <div className="mt-8 flex flex-col items-center">
+        <div className="flex gap-2" aria-label="5 stelle su 5">
+          {Array.from({ length: 5 }, (_, i) => (
+            <StarIcon key={i} className="size-3.5 fill-current" />
+          ))}
+        </div>
+        <p className="mt-2.5">+250 imprenditori e professionisti soddisfatti</p>
       </div>
-    </section>
+    </div>
   )
 }

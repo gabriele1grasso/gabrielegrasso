@@ -1,6 +1,12 @@
 import { Link } from '@tanstack/react-router'
 
-import { InstagramIcon, LinkedinIcon } from '@/components/icons/social'
+import { InstagramIcon, LinkedinIcon, TiktokIcon } from '@/components/icons/social'
+
+const socialLinks = [
+  { href: 'https://www.instagram.com/gabriele1grasso/', label: 'Instagram', Icon: InstagramIcon },
+  { href: 'https://www.linkedin.com/in/gabrielegrassodigital/', label: 'LinkedIn', Icon: LinkedinIcon },
+  { href: 'https://www.tiktok.com/@gabriele1grasso', label: 'TikTok', Icon: TiktokIcon },
+]
 
 const legalLinks = [
   { to: '/termini-e-condizioni', label: 'Termini e Condizioni' },
@@ -8,89 +14,67 @@ const legalLinks = [
   { to: '/cookie-policy', label: 'Cookie Policy' },
 ]
 
+const labelClass = 'font-bold text-white/35'
+
 export function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="border-t">
-      <div className="container-page flex flex-col gap-10 py-16">
-        <div className="flex flex-col justify-between gap-10 md:flex-row md:items-start">
-          <div className="max-w-sm">
-            <img src="/logo.png" alt="gabrielegrasso." width={576} height={193} className="h-12 w-auto" />
-            <p className="text-muted-foreground mt-4 text-xl font-semibold">
-              Il tuo metodo per fare Meta Ads parte da qui
-            </p>
-            <div className="mt-4 flex items-center gap-3">
-              <a
-                href="https://www.instagram.com/"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Instagram"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                <InstagramIcon className="size-5" />
-              </a>
-              <a
-                href="https://www.linkedin.com/"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="LinkedIn"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                <LinkedinIcon className="size-5" />
-              </a>
-            </div>
+    <footer className="bg-black text-white">
+      <div className="container-page pt-[120px] pb-16">
+        <p className="text-display max-w-[950px]">Il tuo metodo per fare Meta Ads parte da qui.</p>
+
+        <div className="mt-10 grid gap-8 sm:grid-cols-3 sm:gap-12">
+          <div>
+            <p className={labelClass}>Email</p>
+            <a href="mailto:info@gabrielegrasso.com" className="mt-2.5 block hover:underline">
+              info@gabrielegrasso.com
+            </a>
           </div>
+          <div>
+            <p className={labelClass}>Domande?</p>
+            <a href="mailto:info@gabrielegrasso.com" className="mt-2.5 block hover:underline">
+              Contattami
+            </a>
+          </div>
+          <ul className="flex items-start gap-[29px]">
+            {socialLinks.map(({ href, label, Icon }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={label}
+                  className="block transition-opacity hover:opacity-70"
+                >
+                  <Icon className="size-[21px]" />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
-            <div>
-              <h3 className="text-sm font-semibold">Email</h3>
-              <ul className="mt-3 space-y-2 text-sm">
-                <li>
-                  <a
-                    href="mailto:info@gabrielegrasso.com"
-                    className="text-muted-foreground hover:text-foreground"
-                  >
-                    info@gabrielegrasso.com
-                  </a>
+        <div className="mt-10 grid gap-10 border-t border-white/15 pt-9 sm:grid-cols-[1.2fr_1fr] sm:gap-12">
+          <div>
+            <p className={labelClass}>Legal</p>
+            <ul className="mt-5 flex flex-col gap-4">
+              {legalLinks.map((link) => (
+                <li key={link.to}>
+                  <Link to={link.to} className="text-feature hover:underline">
+                    {link.label}
+                  </Link>
                 </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-sm font-semibold">Domande?</h3>
-              <ul className="mt-3 space-y-2 text-sm">
-                <li>
-                  <a
-                    href="mailto:info@gabrielegrasso.com"
-                    className="text-muted-foreground hover:text-foreground"
-                  >
-                    Contattami
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-sm font-semibold">Legal</h3>
-              <ul className="mt-3 space-y-2 text-sm">
-                {legalLinks.map((link) => (
-                  <li key={link.to}>
-                    <Link to={link.to} className="text-muted-foreground hover:text-foreground">
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+              ))}
+            </ul>
+          </div>
+          <div className="flex max-w-[422px] flex-col gap-4 text-white/35">
+            <p>Direzione Digitale è un marchio di Linker srl unipersonale</p>
+            <p>P.IVA 04938400878</p>
+            <p>© {year} Linker srl unipersonale</p>
           </div>
         </div>
 
-        <div className="text-muted-foreground flex flex-col gap-1 border-t pt-6 text-xs">
-          <p>Direzione Digitale è un marchio di Linker srl unipersonale</p>
-          <p>P.IVA 04938400878</p>
-          <p>© {year} Linker srl unipersonale</p>
-        </div>
+        <div className="mt-12 border-t border-white/15" />
       </div>
     </footer>
   )
