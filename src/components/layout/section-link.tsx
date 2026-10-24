@@ -34,11 +34,11 @@ export function SectionLink({ section, onClick, ...props }: SectionLinkProps) {
     onClick?.(event)
     const target = document.getElementById(section)
     // Già sulla home: scroll gestito qui. Se l'hash è già lo stesso il router non farebbe nulla
-    // e dal secondo clic in poi la pagina resterebbe ferma.
+    // e dal secondo clic in poi la pagina resterebbe ferma. L'indirizzo non viene toccato: ogni
+    // modifica dell'hash fa scattare lo scroll istantaneo del router, che annulla quello fluido.
     if (target && !event.defaultPrevented) {
       event.preventDefault()
       target.scrollIntoView({ behavior: scrollBehavior(), block: 'start' })
-      window.history.replaceState(window.history.state, '', `#${section}`)
     }
   }
 
