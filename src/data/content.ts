@@ -1,5 +1,5 @@
 /** Pagina di pagamento del Protocollo 3P su systeme.io */
-export const CHECKOUT_URL = 'https://checkout.gabrielegrasso.com/73c2bfd4'
+export const CHECKOUT_URL = 'https://checkout.gabrielegrasso.com/5ad13e54'
 
 export interface Testimonial {
   id: string
