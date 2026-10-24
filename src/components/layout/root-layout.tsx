@@ -3,6 +3,7 @@ import { Outlet, Scripts } from '@tanstack/react-router'
 import { BackToTop } from '@/components/layout/back-to-top'
 import { Footer } from '@/components/layout/footer'
 import { Header } from '@/components/layout/header'
+import { MetaPixel } from '@/components/layout/meta-pixel'
 
 export function RootLayout() {
   return (
@@ -13,6 +14,7 @@ export function RootLayout() {
       </main>
       <Footer />
       <BackToTop />
+      <MetaPixel />
       {/* Nell'HTML prerenderizzato: lo stato del router che il browser riprende all'avvio */}
       <Scripts />
     </div>

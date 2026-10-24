@@ -15,9 +15,22 @@
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Il Protocollo 3P: la checklist per rimettere in ordine Meta Ads" />
     <meta name="twitter:card" content="summary_large_image" />
+    <!-- Pixel di Meta "Pixel Gabriele Grasso": PageView al caricamento di ogni pagina.
+         I cambi di pagina interni (senza ricarica) li invia components/layout/meta-pixel.tsx -->
+    <script>
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1838141280906514');
+      fbq('track', 'PageView');
+    </script>
     <!--app-head-->
   </head>
   <body>
+    <noscript><img height="1" width="1" style="display:none" alt=""
+      src="https://www.facebook.com/tr?id=1838141280906514&ev=PageView&noscript=1" /></noscript>
     <div id="root"><!--app-html--></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
