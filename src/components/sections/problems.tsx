@@ -1,7 +1,7 @@
-import { Link } from '@tanstack/react-router'
 import { ActivityIcon, ChartPieIcon, CircleStopIcon, ClockIcon, FrownIcon } from 'lucide-react'
 
 import { Rating } from '@/components/sections/rating'
+import { SectionLink } from '@/components/layout/section-link'
 import { Button } from '@/components/ui/button'
 import { problems } from '@/data/content'
 import { cn } from '@/lib/utils'
@@ -57,7 +57,7 @@ export function Problems() {
           <div className="flex flex-col items-center text-center">
             <Rating className="items-center" />
             <Button asChild variant="accent" size="lg" className="mt-4 w-full">
-              <Link to="/grazie">Inizia ora il Protocollo 3P</Link>
+              <SectionLink section="acquista">Inizia ora il Protocollo 3P</SectionLink>
             </Button>
             <p className="mt-3">Soddisfatto o rimborsato 14 giorni</p>
           </div>

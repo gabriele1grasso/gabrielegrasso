@@ -1,7 +1,7 @@
-import { Link } from '@tanstack/react-router'
 import { CalculatorIcon, RefreshCwIcon, SquarePlayIcon } from 'lucide-react'
 
 import { Rating } from '@/components/sections/rating'
+import { SectionLink } from '@/components/layout/section-link'
 import { Button } from '@/components/ui/button'
 import { heroFeatures } from '@/data/content'
 import { srcSetFor } from '@/lib/images'
@@ -43,7 +43,7 @@ export function Hero() {
           <Rating className="mt-10" />
 
           <Button asChild size="lg" className="mt-4">
-            <Link to="/grazie">Inizia ora il Protocollo 3P</Link>
+            <SectionLink section="acquista">Inizia ora il Protocollo 3P</SectionLink>
           </Button>
           <p className="mt-3">Soddisfatto o rimborsato 14 giorni</p>
         </div>

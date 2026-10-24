@@ -1,4 +1,3 @@
-import { Link } from '@tanstack/react-router'
 import { StarIcon } from 'lucide-react'
 
 import {
@@ -8,7 +7,7 @@ import {
   ScreenPlayFilledIcon,
 } from '@/components/icons/filled'
 import { Button } from '@/components/ui/button'
-import { checklistFeatures } from '@/data/content'
+import { CHECKOUT_URL, checklistFeatures } from '@/data/content'
 
 const featureIcons = [
   ScreenPlayFilledIcon,
@@ -19,7 +18,9 @@ const featureIcons = [
 
 export function PricingCard() {
   return (
-    <div className="flex flex-col rounded-2xl bg-white p-6 pb-12 text-[#010101] sm:p-10 sm:pb-12">
+    <div
+      id="acquista"
+      className="flex scroll-mt-(--section-offset) flex-col rounded-2xl bg-white p-6 pb-12 text-[#010101] sm:p-10 sm:pb-12">
       <p className="text-[#010101]/70">La Checklist Protocollo 3P</p>
       <h2 className="text-display mt-7.5 leading-[1.4]">Tutto il metodo, in un'unica guida</h2>
       <p className="mt-7.5">
@@ -49,7 +50,7 @@ export function PricingCard() {
       </p>
 
       <Button asChild variant="accent" size="lg" className="mt-5 self-center">
-        <Link to="/grazie">Inizia ora il Protocollo 3P</Link>
+        <a href={CHECKOUT_URL}>Inizia ora il Protocollo 3P</a>
       </Button>
 
       <div className="mt-8 flex flex-col items-center">

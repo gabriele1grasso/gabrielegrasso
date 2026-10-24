@@ -1,6 +1,6 @@
-import { Link } from '@tanstack/react-router'
 import type { ReactNode } from 'react'
 
+import { SectionLink } from '@/components/layout/section-link'
 import { Button } from '@/components/ui/button'
 import { solutionTriads } from '@/data/content'
 
@@ -65,7 +65,7 @@ export function Solutions() {
           </p>
           <div className="flex justify-center">
             <Button asChild variant="accent" size="lg">
-              <Link to="/grazie">Inizia ora il Protocollo 3P</Link>
+              <SectionLink section="acquista">Inizia ora il Protocollo 3P</SectionLink>
             </Button>
           </div>
         </div>

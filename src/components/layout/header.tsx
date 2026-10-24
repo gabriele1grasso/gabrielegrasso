@@ -71,7 +71,7 @@ export function Header() {
 
           <div className="hidden lg:block">
             <Button asChild variant="accent" size="lg" className="font-extrabold tracking-[-0.5px]">
-              <SectionLink section="come-funziona">Inizia il Protocollo 3P</SectionLink>
+              <SectionLink section="acquista">Inizia il Protocollo 3P</SectionLink>
             </Button>
           </div>
 
@@ -97,7 +97,7 @@ export function Header() {
                   </SectionLink>
                 ))}
                 <Button asChild variant="accent" className="mt-4 font-bold">
-                  <SectionLink section="come-funziona" onClick={() => setMobileNavOpen(false)}>
+                  <SectionLink section="acquista" onClick={() => setMobileNavOpen(false)}>
                     Inizia il Protocollo 3P
                   </SectionLink>
                 </Button>

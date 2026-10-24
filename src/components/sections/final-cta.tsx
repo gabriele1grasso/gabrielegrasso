@@ -1,5 +1,3 @@
-import { Link } from '@tanstack/react-router'
-
 import {
   CardRefundFilledIcon,
   DocumentsFilledIcon,
@@ -7,7 +5,7 @@ import {
   ShieldCheckFilledIcon,
 } from '@/components/icons/filled'
 import { Button } from '@/components/ui/button'
-import { finalCtaFeatures } from '@/data/content'
+import { CHECKOUT_URL, finalCtaFeatures } from '@/data/content'
 
 const featureIcons = [
   ScreenPlayFilledIcon,
@@ -58,7 +56,7 @@ export function FinalCta() {
           </p>
 
           <Button asChild size="lg" className="mt-7.5">
-            <Link to="/grazie">Inizia il Protocollo 3P</Link>
+            <a href={CHECKOUT_URL}>Inizia il Protocollo 3P</a>
           </Button>
         </div>
       </div>

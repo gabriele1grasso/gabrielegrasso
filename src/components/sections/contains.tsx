@@ -1,8 +1,8 @@
-import { Link } from '@tanstack/react-router'
 import { CreditCardIcon, LockOpenIcon, SquareCheckBigIcon, SquarePlayIcon } from 'lucide-react'
 
 import { Rating } from '@/components/sections/rating'
 import { ToolsCard } from '@/components/sections/tools'
+import { SectionLink } from '@/components/layout/section-link'
 import { Button } from '@/components/ui/button'
 import { containsFeatures } from '@/data/content'
 
@@ -36,7 +36,7 @@ function ContainsCard() {
 
       <div className="mt-auto flex flex-col items-start pt-16">
         <Button asChild size="lg">
-          <Link to="/grazie">Inizia ora il Protocollo 3P</Link>
+          <SectionLink section="acquista">Inizia ora il Protocollo 3P</SectionLink>
         </Button>
         <Rating className="mt-6" />
       </div>
