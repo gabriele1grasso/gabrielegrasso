@@ -50,8 +50,10 @@ export function Hero() {
 
         <img
           src="/hero-protocollo.webp"
-          srcSet={srcSetFor('/hero-protocollo.webp', 1000)}
-          sizes="(min-width: 1024px) 560px, 100vw"
+          // Variante da 800px: i telefoni ad alta densità (es. 412px × 1,75) altrimenti
+          // salterebbero dalla 640 direttamente all'originale da 1000px.
+          srcSet={srcSetFor('/hero-protocollo.webp', 1000, [640, 800])}
+          sizes="(min-width: 1024px) 560px, calc(100vw - 40px)"
           fetchPriority="high"
           alt="Anteprima del Protocollo 3P: la checklist per rimettere in ordine Meta Ads"
           width={1000}

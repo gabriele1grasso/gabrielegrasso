@@ -43,7 +43,11 @@ TanStack Query, Zustand. TypeScript, alias `@` → `src/`. Lint: `npm run lint` 
 - **Rotte:** `src/router.tsx`.
 - **Immagini:** `public/`, in WebP. Ogni immagine grande ha anche la variante `-640.webp`
   per mobile, usata da `srcSetFor()` in `src/lib/images.ts`. Se aggiungi un'immagine, crea
-  entrambe le versioni.
+  entrambe le versioni. L'hero ha anche `-800.webp` (telefoni ad alta densità) e il logo
+  `logo-240.webp`.
+- **JavaScript leggero:** il pannello del menu mobile (`layout/mobile-nav.tsx`, Radix Dialog)
+  si carica solo al primo tocco; la fisarmonica di FAQ e Protocollo (`ui/card-accordion.tsx`)
+  è scritta a mano senza Radix. Non reintrodurre librerie nel bundle iniziale.
 - **SEO:** `src/components/layout/seo.tsx` (titolo, descrizione, canonical, Open Graph per
   pagina; `SITE_URL`). `public/sitemap.xml` e `public/robots.txt`.
 

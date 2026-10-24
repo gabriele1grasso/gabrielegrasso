@@ -17,8 +17,6 @@ export function Faq() {
 
         <div className="mt-15">
           <CardAccordion
-            type="single"
-            collapsible
             value={openFaqId ?? ''}
             onValueChange={(value) => setOpenFaqId(value || null)}
           >
