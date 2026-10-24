@@ -4,7 +4,7 @@ import { phases } from '@/data/content'
 
 function Phases() {
   return (
-    <CardAccordion type="single" collapsible className="mt-10">
+    <CardAccordion className="mt-10">
       {phases.map((phase) => (
         <CardAccordionItem
           key={phase.id}
