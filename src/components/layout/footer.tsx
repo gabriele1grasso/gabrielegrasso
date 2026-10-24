@@ -1,6 +1,7 @@
 import { Link } from '@tanstack/react-router'
 
 import { InstagramIcon, LinkedinIcon, TiktokIcon } from '@/components/icons/social'
+import { useConsentStore } from '@/lib/consent'
 
 const socialLinks = [
   { href: 'https://www.instagram.com/gabriele1grasso/', label: 'Instagram', Icon: InstagramIcon },
@@ -18,6 +19,7 @@ const labelClass = 'font-bold text-white/55'
 
 export function Footer() {
   const year = new Date().getFullYear()
+  const openCookieBanner = useConsentStore((state) => state.openBanner)
 
   return (
     <footer className="bg-black text-white">
@@ -65,6 +67,11 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <button type="button" onClick={openCookieBanner} className="text-feature text-left hover:underline">
+                  Preferenze cookie
+                </button>
+              </li>
             </ul>
           </div>
           <div className="flex max-w-[422px] flex-col gap-4 text-white/55">
