@@ -119,9 +119,9 @@ export const solutionTriads: SolutionTriad[] = [
     solution: 'Le metriche che contano, spiegate in modo semplice',
     result: 'Sai se sta funzionando o se serve correggere',
     image: '/soluzione-metriche.webp',
-    imageWidth: 500,
-    imageHeight: 263,
-    imageAlt: 'Le metriche chiave: CPM, CTR, CPA e ROAS',
+    imageWidth: 1000,
+    imageHeight: 780,
+    imageAlt: 'Le metriche chiave: CPM, CTR, CPA, ROAS e CAC',
   },
   {
     id: 's3',
