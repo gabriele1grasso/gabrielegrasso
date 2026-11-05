@@ -45,11 +45,11 @@ export function Video() {
               >
                 <img
                   src="/video-copertina.webp"
-                  srcSet={srcSetFor('/video-copertina.webp', 797)}
+                  srcSet={srcSetFor('/video-copertina.webp', 1600)}
                   sizes="(min-width: 1024px) 912px, 100vw"
                   alt=""
-                  width={797}
-                  height={448}
+                  width={1600}
+                  height={900}
                   loading="lazy"
                   className="absolute inset-0 size-full object-cover"
                 />
