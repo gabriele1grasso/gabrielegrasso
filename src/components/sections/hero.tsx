@@ -16,13 +16,11 @@ export function Hero() {
     >
       <div className="container-page grid items-center gap-12 pt-[calc(135px-var(--header-h))] pb-[84px] lg:grid-cols-[1fr_minmax(0,0.95fr)] lg:gap-10">
         <div className="flex flex-col items-start">
-          <h1 className="text-display mt-6 text-white">
-            La guida precisa per non bruciare budget su Meta.
-          </h1>
+          <p className="text-white/75">Per imprenditori e professionisti</p>
 
-          <p className="text-subtitle mt-5 max-w-xl text-white/90">
-            Per imprenditori e professionisti: che tu abbia uno studio o venda un percorso online.
-          </p>
+          <h1 className="text-display mt-6 text-white">
+            Chi avrebbe bisogno di te non sa che esisti, e tu non sai usare Meta per farti trovare.
+          </h1>
 
           <p className="mt-8 max-w-xl">
             <strong className="font-bold">Pannello, Pubblico, Portafoglio.</strong> La sequenza per
