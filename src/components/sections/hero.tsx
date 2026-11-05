@@ -55,7 +55,7 @@ export function Hero() {
           srcSet={srcSetFor('/hero-protocollo.webp', 1000)}
           sizes="(min-width: 1024px) 560px, 100vw"
           fetchPriority="high"
-          alt="Anteprima del Protocollo 3P: la checklist per rimettere in ordine Meta Ads"
+          alt="Anteprima del Protocollo 3P: la guida per rimettere in ordine Meta Ads"
           width={1000}
           height={868}
           className="w-full shadow-[0_20px_60px_rgba(40,20,120,0.25)]"

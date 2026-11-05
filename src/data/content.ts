@@ -83,7 +83,7 @@ export const problems: Problem[] = [
 ]
 
 export const containsFeatures = [
-  'Checklist operativa: Pannello, Pubblico, Portafoglio',
+  'Guida operativa: Pannello, Pubblico, Portafoglio',
   'Accesso con aggiornamenti continui',
   'Video guide e screenshot per i passaggi chiave',
   'Garanzia soddisfatto o rimborsato entro 14 giorni',
@@ -193,7 +193,7 @@ export const methodologyPoints = [
     id: 'm3',
     title: 'Capisci il perché di ogni passaggio',
     description:
-      'Ogni task ti spiega il perché, non solo il cosa. Così capisci la logica e sai muoverti da solo, anche dove la checklist non arriva.',
+      'Ogni task ti spiega il perché, non solo il cosa. Così capisci la logica e sai muoverti da solo, anche dove la guida non arriva.',
   },
   {
     id: 'm4',

@@ -60,7 +60,7 @@ export function Foundation() {
               src="/fondamenta-checklist.webp"
               srcSet={srcSetFor('/fondamenta-checklist.webp', 1280)}
               sizes="(min-width: 1024px) 50vw, 100vw"
-              alt="La checklist del Protocollo 3P completata al 100%: puoi lanciare la campagna con controllo"
+              alt="La guida del Protocollo 3P completata al 100%: puoi lanciare la campagna con controllo"
               width={1280}
               height={612}
               loading="lazy"

@@ -21,7 +21,7 @@ export function PricingCard() {
     <div
       id="acquista"
       className="flex scroll-mt-(--section-offset) flex-col rounded-2xl bg-white p-6 pb-12 text-[#010101] sm:p-10 sm:pb-12">
-      <p className="text-[#010101]/70">La Checklist Protocollo 3P</p>
+      <p className="text-[#010101]/70">La Guida Protocollo 3P</p>
       <h2 className="text-display mt-7.5 leading-[1.4]">Tutto il metodo, in un'unica guida</h2>
       <p className="mt-7.5">
         La guida operativa completa: dalla configurazione del Portfolio Business alla campagna
