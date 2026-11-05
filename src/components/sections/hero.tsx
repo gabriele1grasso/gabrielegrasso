@@ -19,7 +19,7 @@ export function Hero() {
           <p className="text-white/75">Per imprenditori e professionisti</p>
 
           <h1 className="text-display mt-6 text-white">
-            La lista precisa per non bruciare budget su Meta.
+            La guida precisa per non bruciare budget su Meta.
           </h1>
 
           <p className="mt-8 max-w-xl">
