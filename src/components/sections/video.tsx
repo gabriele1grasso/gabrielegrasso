@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { PlayIcon, ZapIcon } from 'lucide-react'
 
 import { Rating } from '@/components/sections/rating'
+import { srcSetFor } from '@/lib/images'
 
 // Video Loom. L'iframe si carica solo al clic, così non pesa sul caricamento della pagina.
 const LOOM_EMBED = 'https://www.loom.com/embed/da359b3aa4c84edaa613ebd2e6059062'
@@ -40,9 +41,19 @@ export function Video() {
               <button
                 type="button"
                 onClick={() => setPlaying(true)}
-                className="group relative flex aspect-video w-full cursor-pointer items-center justify-center overflow-hidden rounded-2xl bg-[#e9e9eb]"
+                className="group relative flex aspect-video w-full cursor-pointer items-center justify-center overflow-hidden rounded-2xl bg-[#efefea]"
               >
-                <span className="flex size-24 items-center justify-center rounded-full bg-black/15 backdrop-blur transition-transform group-hover:scale-105 sm:size-36">
+                <img
+                  src="/video-copertina.webp"
+                  srcSet={srcSetFor('/video-copertina.webp', 797)}
+                  sizes="(min-width: 1024px) 912px, 100vw"
+                  alt=""
+                  width={797}
+                  height={448}
+                  loading="lazy"
+                  className="absolute inset-0 size-full object-cover"
+                />
+                <span className="relative flex size-24 items-center justify-center rounded-full bg-black/35 backdrop-blur transition-transform group-hover:scale-105 sm:size-36">
                   <PlayIcon className="ml-1 size-10 fill-white text-white sm:size-14" />
                 </span>
                 <span className="sr-only">Guarda il video</span>
