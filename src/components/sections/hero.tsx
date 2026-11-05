@@ -19,7 +19,7 @@ export function Hero() {
           <p className="text-white/75">Per imprenditori e professionisti</p>
 
           <h1 className="text-display mt-6 text-white">
-            I clienti non sanno che esisti, e tu non sai usare Meta per farti trovare.
+            Chi avrebbe bisogno di te non sa che esisti, e tu non sai usare Meta per farti trovare.
           </h1>
 
           <p className="mt-8 max-w-xl">
