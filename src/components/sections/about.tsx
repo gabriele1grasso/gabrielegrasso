@@ -8,6 +8,7 @@ import {
   MegaphoneFilledIcon,
 } from '@/components/icons/filled'
 import { credentials } from '@/data/content'
+import { srcSetFor } from '@/lib/images'
 import { cn } from '@/lib/utils'
 
 const credentialIcons = [
@@ -17,7 +18,7 @@ const credentialIcons = [
   BriefcaseFilledIcon,
 ]
 
-// TODO: sostituire i placeholder con le foto reali (ritratto e immagini del carosello).
+// TODO: sostituire i placeholder del carosello con le foto reali.
 // Larghezze delle immagini del carosello misurate sull'originale, tutte alte 159px.
 const carouselItems = [
   { id: 'c1', width: 271 },
@@ -88,9 +89,15 @@ export function About() {
               destra, così sotto non resta spazio vuoto. */}
           <div className="relative mt-7 flex-1">
             <div className="aspect-square" />
-            <ImagePlaceholder
-              label="Ritratto di Gabriele Grasso"
-              className="text-muted-foreground absolute inset-0 rounded-3xl bg-gradient-to-b from-[#ececec] to-[#cfcfcf]"
+            <img
+              src="/gabriele-ritratto.webp"
+              srcSet={srcSetFor('/gabriele-ritratto.webp', 792)}
+              sizes="(min-width: 1024px) 560px, 100vw"
+              alt="Ritratto di Gabriele Grasso"
+              width={792}
+              height={792}
+              loading="lazy"
+              className="absolute inset-0 size-full rounded-3xl bg-[#f3f4f8] object-cover object-top"
             />
           </div>
         </div>
