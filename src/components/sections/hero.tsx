@@ -22,6 +22,10 @@ export function Hero() {
             La guida precisa per non bruciare budget su Meta.
           </h1>
 
+          <p className="text-subtitle mt-5 max-w-xl text-white/90">
+            Per imprenditori e professionisti: che tu abbia uno studio o venda un percorso online.
+          </p>
+
           <p className="mt-8 max-w-xl">
             <strong className="font-bold">Pannello, Pubblico, Portafoglio.</strong> La sequenza per
             impostare le tue campagne Meta Ads nel modo giusto, che tu debba ancora iniziare o che tu
