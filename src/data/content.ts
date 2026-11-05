@@ -44,7 +44,7 @@ export interface SolutionTriad {
 }
 
 export const heroFeatures = [
-  'Spiegazioni e immagini ti accompagnano per tutto il percorso. Trovi anche delle video guide di approfondimento.',
+  'Strategia e creatività: a chi parlare, cosa dirgli e come mostrarlo. Oggi su Meta è questo che fa la differenza.',
   'Un calcolatore per il budget: sai quanto spendere prima di partire, non improvvisi.',
   'Aggiornamenti inclusi. Se Meta cambia le regole, la guida si adegua di conseguenza.',
 ]
@@ -84,6 +84,7 @@ export const problems: Problem[] = [
 
 export const containsFeatures = [
   'Guida operativa: Pannello, Pubblico, Portafoglio',
+  'Strategia e creatività: cliente ideale, angoli, testi e video per gli annunci',
   'Accesso con aggiornamenti continui',
   'Video guide e screenshot per i passaggi chiave',
   'Garanzia soddisfatto o rimborsato entro 14 giorni',
@@ -122,6 +123,16 @@ export const solutionTriads: SolutionTriad[] = [
     imageWidth: 1000,
     imageHeight: 780,
     imageAlt: 'Le metriche chiave: CPM, CTR, CPA, ROAS e CAC',
+  },
+  {
+    id: 's4',
+    problem: 'I tuoi annunci passano inosservati',
+    solution: 'Strategia e creatività: cliente ideale, angoli da testare, testi e video',
+    result: 'Sai cosa dire e come mostrarlo',
+    image: '/soluzione-creativita.webp',
+    imageWidth: 1000,
+    imageHeight: 532,
+    imageAlt: 'Strategia e creatività: cliente ideale, angoli, creatività e test',
   },
   {
     id: 's3',
@@ -222,9 +233,9 @@ export const phases: Phase[] = [
   {
     id: 'pubblico',
     number: '02',
-    title: 'Pubblico: la strategia prima della campagna',
+    title: 'Pubblico: strategia e creatività prima della campagna',
     description:
-      'Le tre fasi del funnel e l’obiettivo giusto per la tua. Costruisci il profilo del cliente ideale con problemi, desideri e obiezioni reali. Definisci cosa ti rende diverso e scegli gli angoli da testare.',
+      'Le tre fasi del funnel e l’obiettivo giusto per la tua. Costruisci il profilo del cliente ideale con problemi, desideri e obiezioni reali. Definisci cosa ti rende diverso e scegli gli angoli da testare. Da lì scrivi i testi e gli script dei video, e prepari più versioni da mettere alla prova.',
     result: 'Non scrivi più annunci a caso: parli a una persona precisa.',
   },
   {
@@ -254,6 +265,7 @@ export const checklistFeatures = [
 
 export const finalCtaFeatures = [
   'Guida operativa Pannello, Pubblico, Portafoglio',
+  'Strategia e creatività: cliente ideale, angoli, testi e video per gli annunci',
   'Aggiornamenti della guida inclusi',
   'Video guide e screenshot sui passaggi tecnici',
   '14 giorni per il rimborso',

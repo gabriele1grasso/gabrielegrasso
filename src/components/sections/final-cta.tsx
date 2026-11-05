@@ -1,4 +1,5 @@
 import {
+  BrainGearFilledIcon,
   CardRefundFilledIcon,
   DocumentsFilledIcon,
   ScreenPlayFilledIcon,
@@ -9,6 +10,7 @@ import { CHECKOUT_URL, finalCtaFeatures } from '@/data/content'
 
 const featureIcons = [
   ScreenPlayFilledIcon,
+  BrainGearFilledIcon,
   ShieldCheckFilledIcon,
   DocumentsFilledIcon,
   CardRefundFilledIcon,
@@ -30,14 +32,16 @@ export function FinalCta() {
           style={{ backgroundImage: cardBackground }}
         >
           <p className="text-white/70">Inizia oggi</p>
-          <h2 className="text-display mt-5 max-w-[1160px]">Pronto a fare Meta Ads con un metodo?</h2>
+          <h2 className="text-display mt-5 max-w-[1160px]">
+            Pronto a fare Meta Ads con un metodo?
+          </h2>
           <p className="mt-7.5">
             Hai visto cosa contiene, sai chi te lo propone, hai 14 giorni per provarla. Tutto quello
             che ti serve è già qui.
           </p>
 
           {/* Due colonne a metà larghezza, riempite dall'alto in basso come nell'originale */}
-          <ul className="mt-8 grid w-full gap-y-[19px] sm:grid-flow-col sm:grid-cols-2 sm:grid-rows-2 sm:gap-x-6">
+          <ul className="mt-8 grid w-full gap-y-[19px] sm:grid-flow-col sm:grid-cols-2 sm:grid-rows-3 sm:gap-x-6">
             {finalCtaFeatures.map((feature, i) => {
               const Icon = featureIcons[i]
               return (

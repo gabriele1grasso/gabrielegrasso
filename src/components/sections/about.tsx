@@ -3,40 +3,40 @@ import {
   ChartGrowthFilledIcon,
   GraduationCapFilledIcon,
   MegaphoneFilledIcon,
-} from "@/components/icons/filled";
-import { credentials } from "@/data/content";
-import { srcSetFor } from "@/lib/images";
+} from '@/components/icons/filled'
+import { credentials } from '@/data/content'
+import { srcSetFor } from '@/lib/images'
 
 const credentialIcons = [
   GraduationCapFilledIcon,
   MegaphoneFilledIcon,
   ChartGrowthFilledIcon,
   BriefcaseFilledIcon,
-];
+]
 
 // Foto del carosello, tutte alte 159px: la larghezza segue le proporzioni di ogni foto.
 const carouselItems = [
   {
-    src: "/carosello-1.webp",
+    src: '/carosello-1.webp',
     width: 282,
-    alt: "Gabriele in videochiamata con due clienti, con Gestione inserzioni aperto",
+    alt: 'Gabriele in videochiamata con due clienti, con Gestione inserzioni aperto',
   },
   {
-    src: "/carosello-2.webp",
+    src: '/carosello-2.webp',
     width: 244,
-    alt: "Gabriele durante una lezione in aula",
+    alt: 'Gabriele durante una lezione in aula',
   },
   {
-    src: "/carosello-3.webp",
+    src: '/carosello-3.webp',
     width: 139,
-    alt: "Gabriele presenta Meta for Business",
+    alt: 'Gabriele presenta Meta for Business',
   },
   {
-    src: "/carosello-4.webp",
+    src: '/carosello-4.webp',
     width: 178,
-    alt: "Gabriele durante un corso di formazione con i partecipanti al computer",
+    alt: 'Gabriele durante un corso di formazione con i partecipanti al computer',
   },
-];
+]
 
 function Carousel() {
   return (
@@ -44,16 +44,12 @@ function Carousel() {
       <div className="animate-marquee flex w-max">
         {/* Due copie identiche per un loop senza stacchi; la seconda è nascosta agli screen reader */}
         {[0, 1].map((copy) => (
-          <div
-            key={copy}
-            aria-hidden={copy === 1}
-            className="flex gap-px pr-px"
-          >
+          <div key={copy} aria-hidden={copy === 1} className="flex gap-px pr-px">
             {carouselItems.map((item) => (
               <img
                 key={item.src}
                 src={item.src}
-                alt={copy === 0 ? item.alt : ""}
+                alt={copy === 0 ? item.alt : ''}
                 width={item.width}
                 height={159}
                 loading="lazy"
@@ -65,28 +61,22 @@ function Carousel() {
         ))}
       </div>
     </div>
-  );
+  )
 }
 
 export function About() {
   return (
-    <section
-      id="chi-sono"
-      className="bg-brand-gradient scroll-mt-(--section-offset)"
-    >
+    <section id="chi-sono" className="bg-brand-gradient scroll-mt-(--section-offset)">
       {/* Su desktop lo sfondo è alto almeno quanto lo schermo e le card, con le loro dimensioni
           naturali, stanno centrate in verticale. */}
       <div className="container-page grid content-center gap-6 pt-15 pb-[84px] lg:min-h-svh lg:grid-cols-2 lg:py-6">
         <div className="flex min-w-0 flex-col rounded-2xl bg-white p-6 sm:p-12 sm:pb-[72px]">
-          <p className="text-muted-foreground">
-            Chi c'è dietro il Protocollo 3P
-          </p>
+          <p className="text-muted-foreground">Chi c'è dietro il Protocollo 3P</p>
           <h2 className="text-display mt-5.5">Gabriele Grasso</h2>
           <p className="mt-7.5">
-            Sono Gabriele Grasso. Ho lavorato con Meta Ads per dieci anni,
-            l'ultimo periodo in WPP Media, uno dei più grandi gruppi media al
-            mondo. Oggi faccio consulenza a imprenditori e professionisti e mi
-            occupo del marketing nell'azienda della mia famiglia: una doppia
+            Sono Gabriele Grasso. Ho lavorato con Meta Ads per dieci anni, l'ultimo periodo in WPP
+            Media, uno dei più grandi gruppi media al mondo. Oggi faccio consulenza a imprenditori e
+            professionisti e mi occupo del marketing nell'azienda della mia famiglia: una doppia
             prospettiva che porto dentro il Protocollo.
           </p>
           {/* Il ritratto (quadrato, come nell'originale) cresce fino all'altezza della card a
@@ -95,7 +85,7 @@ export function About() {
             <div className="aspect-square" />
             <img
               src="/gabriele-ritratto.webp"
-              srcSet={srcSetFor("/gabriele-ritratto.webp", 792)}
+              srcSet={srcSetFor('/gabriele-ritratto.webp', 792)}
               sizes="(min-width: 1024px) 560px, 100vw"
               alt="Ritratto di Gabriele Grasso"
               width={792}
@@ -112,30 +102,26 @@ export function About() {
             Perché vivo le tue stesse sfide, ogni giorno in azienda.
           </h2>
           <p className="mt-6">
-            Per anni ho gestito campagne per aziende grandi e piccole. Oggi mi
-            occupo di marketing nell'azienda di famiglia, e conosco da vicino le
-            sfide quotidiane di chi guida un'attività. Non ti parlo dall'alto:
-            siamo dalla stessa parte del tavolo.
+            Per anni ho gestito campagne per aziende grandi e piccole. Oggi mi occupo di marketing
+            nell'azienda di famiglia, e conosco da vicino le sfide quotidiane di chi guida
+            un'attività. Non ti parlo dall'alto: siamo dalla stessa parte del tavolo.
           </p>
 
           <Carousel />
 
           <ul className="mt-10.5 flex flex-col gap-[13px]">
             {credentials.map((item, i) => {
-              const Icon = credentialIcons[i];
+              const Icon = credentialIcons[i]
               return (
-                <li
-                  key={item}
-                  className="text-feature flex items-start gap-[11px] font-bold"
-                >
+                <li key={item} className="text-feature flex items-start gap-[11px] font-bold">
                   <Icon className="mt-0.5 size-[17px] shrink-0" />
                   <span>{item}</span>
                 </li>
-              );
+              )
             })}
           </ul>
         </div>
       </div>
     </section>
-  );
+  )
 }

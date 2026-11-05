@@ -1,4 +1,10 @@
-import { CreditCardIcon, LockOpenIcon, SquareCheckBigIcon, SquarePlayIcon } from 'lucide-react'
+import {
+  CreditCardIcon,
+  LightbulbIcon,
+  LockOpenIcon,
+  SquareCheckBigIcon,
+  SquarePlayIcon,
+} from 'lucide-react'
 
 import { Rating } from '@/components/sections/rating'
 import { ToolsCard } from '@/components/sections/tools'
@@ -6,15 +12,19 @@ import { SectionLink } from '@/components/layout/section-link'
 import { Button } from '@/components/ui/button'
 import { containsFeatures } from '@/data/content'
 
-const featureIcons = [SquareCheckBigIcon, LockOpenIcon, SquarePlayIcon, CreditCardIcon]
+const featureIcons = [
+  SquareCheckBigIcon,
+  LightbulbIcon,
+  LockOpenIcon,
+  SquarePlayIcon,
+  CreditCardIcon,
+]
 
 function ContainsCard() {
   return (
     <div className="bg-brand-gradient flex flex-col rounded-2xl p-8 text-white sm:p-10">
       <p className="text-white/75">Cosa contiene</p>
-      <h2 className="text-display mt-6">
-        Il Protocollo 3P passo dopo passo
-      </h2>
+      <h2 className="text-display mt-6">Il Protocollo 3P passo dopo passo</h2>
       <p className="mt-8">
         Smetti di chiederti se stai facendo le cose giuste o se è il momento giusto di iniziare.
         <br />
@@ -22,7 +32,7 @@ function ContainsCard() {
       </p>
 
       {/* Due colonne riempite dall'alto in basso, come nell'originale */}
-      <ul className="mt-10 grid gap-6 sm:grid-flow-col sm:grid-cols-2 sm:grid-rows-2 sm:gap-x-6">
+      <ul className="mt-10 grid gap-6 sm:grid-flow-col sm:grid-cols-2 sm:grid-rows-3 sm:gap-x-6">
         {containsFeatures.map((feature, i) => {
           const Icon = featureIcons[i]
           return (
