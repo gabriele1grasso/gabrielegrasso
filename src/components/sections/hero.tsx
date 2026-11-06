@@ -22,7 +22,7 @@ export function Hero() {
             Chi ha bisogno di te non sa che esisti.
           </h1>
           <p className="mt-5 max-w-2xl text-[length:clamp(26px,2.5vw_+_16px,42px)] leading-[1.1] font-extrabold tracking-[-0.5px] text-white">
-            E tu non sai usare Meta per farti trovare.
+            E tu non sai come usare Meta per farti trovare.
           </p>
 
           <p className="mt-8 max-w-xl">
