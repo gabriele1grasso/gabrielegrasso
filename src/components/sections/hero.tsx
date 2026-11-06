@@ -16,7 +16,7 @@ export function Hero() {
     >
       <div className="container-page grid items-center gap-12 pt-[calc(135px-var(--header-h))] pb-[84px] lg:grid-cols-[1fr_minmax(0,0.9fr)] lg:gap-10">
         <div className="flex flex-col items-start">
-          <p className="text-white/75">Per imprenditori e professionisti</p>
+          <p className="text-white/75">Protocollo 3P – per imprenditori e professionisti</p>
 
           <h1 className="text-display mt-6 text-balance text-white">
             Chi ha bisogno di te non sa che esisti.
