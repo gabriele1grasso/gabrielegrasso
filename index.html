@@ -26,6 +26,26 @@
       fbq('init', '1838141280906514');
       fbq('track', 'PageView');
     </script>
+    <!-- Google Analytics 4 (G-6QERTEGXL3). Lo script parte dopo il caricamento della pagina,
+         per non pesare su PageSpeed. I cambi di pagina interni li rileva GA4 da solo
+         (misurazione avanzata). Il clic sui pulsanti verso il checkout di Systeme si registra
+         come "clic_acquista": l'evento begin_checkout parte già sulla pagina di Systeme. -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6QERTEGXL3');
+      window.addEventListener('load', function () {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-6QERTEGXL3';
+        document.head.appendChild(s);
+      });
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest && e.target.closest('a[href*="checkout.gabrielegrasso.com"]');
+        if (a) gtag('event', 'clic_acquista', { link_url: a.href, transport_type: 'beacon' });
+      });
+    </script>
     <!--app-head-->
   </head>
   <body>
