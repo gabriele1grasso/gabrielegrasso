@@ -45,6 +45,23 @@
         var a = e.target.closest && e.target.closest('a[href*="checkout.gabrielegrasso.com"]');
         if (a) gtag('event', 'clic_acquista', { link_url: a.href, transport_type: 'beacon' });
       });
+      // "sezione_vista": una volta per visita, quando il titolo di una sezione arriva a metà
+      // schermo. Serve a capire fin dove scorrono i visitatori (parametro "sezione" = titolo).
+      window.addEventListener('load', function () {
+        if (!('IntersectionObserver' in window)) return;
+        var viste = {};
+        var oss = new IntersectionObserver(function (voci) {
+          voci.forEach(function (v) {
+            if (!v.isIntersecting) return;
+            var nome = (v.target.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 60);
+            oss.unobserve(v.target);
+            if (!nome || viste[nome]) return;
+            viste[nome] = true;
+            gtag('event', 'sezione_vista', { sezione: nome });
+          });
+        }, { rootMargin: '0px 0px -50% 0px' });
+        document.querySelectorAll('main h1, main h2, #root h1, #root h2').forEach(function (t) { oss.observe(t); });
+      });
     </script>
     <!--app-head-->
   </head>
