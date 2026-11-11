@@ -210,3 +210,13 @@
     --navbar-h: 93px;
   }
 }
+
+/* Banner cookie di iubenda: compare dopo 3 secondi, per non coprire la pagina all'arrivo.
+   Il blocco di pixel e GA4 resta attivo da subito: cambia solo quando si vede il banner. */
+@keyframes iub-ritardo {
+  from { visibility: hidden; opacity: 0; }
+  to { visibility: visible; opacity: 1; }
+}
+#iubenda-cs-banner {
+  animation: iub-ritardo 0.3s ease-out 3s both;
+}
