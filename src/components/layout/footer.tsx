@@ -10,8 +10,12 @@ const socialLinks = [
 
 const legalLinks = [
   { to: '/termini-e-condizioni', label: 'Termini e Condizioni' },
-  { to: '/privacy-policy', label: 'Privacy Policy' },
-  { to: '/cookie-policy', label: 'Cookie Policy' },
+]
+
+// Privacy e cookie policy sono generate e aggiornate da iubenda.
+const iubendaLinks = [
+  { href: 'https://www.iubenda.com/privacy-policy/84061734', label: 'Privacy Policy' },
+  { href: 'https://www.iubenda.com/privacy-policy/84061734/cookie-policy', label: 'Cookie Policy' },
 ]
 
 const labelClass = 'font-bold text-white/55'
@@ -65,6 +69,18 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+              {iubendaLinks.map((link) => (
+                <li key={link.href}>
+                  <a href={link.href} target="_blank" rel="noopener" className="text-feature hover:underline">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+              <li>
+                <a href="#" className="iubenda-cs-preferences-link text-feature hover:underline">
+                  Preferenze cookie
+                </a>
+              </li>
             </ul>
           </div>
           <div className="flex max-w-[422px] flex-col gap-4 text-white/55">

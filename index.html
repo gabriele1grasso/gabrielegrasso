@@ -15,6 +15,10 @@
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Il Protocollo 3P: la guida per rimettere in ordine Meta Ads" />
     <meta name="twitter:card" content="summary_large_image" />
+    <!-- iubenda (banner cookie + blocco automatico + Consent Mode v2 di Google). Deve restare
+         il primo script della pagina, sincrono: blocca pixel di Meta e GA4 finché il visitatore
+         non dà il consenso. -->
+    <script type="text/javascript" src="https://embeds.iubenda.com/widgets/770fc140-bbf1-4a74-b893-9b95e94a1842.js"></script>
     <!-- Pixel di Meta "Pixel Gabriele Grasso": PageView al caricamento di ogni pagina.
          I cambi di pagina interni (senza ricarica) li invia components/layout/meta-pixel.tsx -->
     <script>
@@ -66,8 +70,6 @@
     <!--app-head-->
   </head>
   <body>
-    <noscript><img height="1" width="1" style="display:none" alt=""
-      src="https://www.facebook.com/tr?id=1838141280906514&ev=PageView&noscript=1" /></noscript>
     <div id="root"><!--app-html--></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
